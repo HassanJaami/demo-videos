@@ -2,17 +2,17 @@ import React from "react";
 import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import { theme } from "../../../lib/theme";
 
-export const Intro: React.FC = () => {
+export const Outro: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
   const logoScale = spring({ fps, frame, config: { damping: 80, mass: 0.7 } });
   const logoOpacity = interpolate(frame, [0, 15], [0, 1], { extrapolateRight: "clamp" });
-  const taglineOpacity = interpolate(frame, [20, 45], [0, 1], {
+  const ctaOpacity = interpolate(frame, [20, 40], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
-  const taglineY = interpolate(frame, [20, 45], [16, 0], {
+  const ctaY = interpolate(frame, [20, 40], [12, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
@@ -41,14 +41,15 @@ export const Intro: React.FC = () => {
       </div>
       <div
         style={{
-          fontSize: 28,
-          color: theme.colors.textMuted,
-          marginTop: 20,
-          opacity: taglineOpacity,
-          transform: `translateY(${taglineY}px)`,
+          fontSize: 24,
+          color: theme.colors.accent,
+          marginTop: 24,
+          fontWeight: 500,
+          opacity: ctaOpacity,
+          transform: `translateY(${ctaY}px)`,
         }}
       >
-        College recruiting, finally clear.
+        Your recruiting journey starts here.
       </div>
     </AbsoluteFill>
   );
