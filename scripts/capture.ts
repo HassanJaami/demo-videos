@@ -332,8 +332,7 @@ async function captureByClass() {
   const pages = await discoverPages(page, url);
   console.log(`Found ${pages.length} page(s): ${pages.map((p) => p.text).join(", ")}\n`);
 
-  const captured: { filename: string; pageLabel: string; index: number }[] = [];
-  let fileIndex = 1;
+  const captured: { filepath: string; pageLabel: string; index: number }[] = [];
 
   for (const { href, text: pageText } of pages) {
     if (href !== url && href !== url + "/") await goto(page, href);
@@ -354,22 +353,23 @@ async function captureByClass() {
       continue;
     }
 
-    console.log(`  [${pageText}]  ${tops.length} section(s) found`);
+    const pageDir = path.join(SCREENSHOTS_DIR, slug(pageText));
+    fs.mkdirSync(pageDir, { recursive: true });
+    console.log(`  [${pageText}]  ${tops.length} section(s)  →  screenshots/${slug(pageText)}/`);
 
     for (let i = 0; i < tops.length; i++) {
       // Scroll so the element top aligns with the viewport top
       await page.evaluate((y) => window.scrollTo({ top: y, behavior: "instant" }), tops[i]);
       await page.waitForTimeout(300);
 
-      const filename = `${String(fileIndex).padStart(2, "0")}-${slug(pageText)}-${String(i + 1).padStart(2, "0")}.png`;
-      const filepath = path.join(SCREENSHOTS_DIR, filename);
+      const filename = `${String(i + 1).padStart(2, "0")}.png`;
+      const filepath = path.join(pageDir, filename);
 
       // Fixed-size clip — same 1920×1080 for every section
       await page.screenshot({ path: filepath, clip: { x: 0, y: 0, width: VIEWPORT_W, height: VIEWPORT_H } });
       const { size } = fs.statSync(filepath);
-      console.log(`    ✓ ${filename}  (${(size / 1024).toFixed(0)} KB)`);
-      captured.push({ filename, pageLabel: pageText, index: i });
-      fileIndex++;
+      console.log(`    ✓ ${slug(pageText)}/${filename}  (${(size / 1024).toFixed(0)} KB)`);
+      captured.push({ filepath: `${slug(pageText)}/${filename}`, pageLabel: pageText, index: i });
     }
     console.log();
   }
@@ -379,7 +379,8 @@ async function captureByClass() {
   if (!fs.existsSync(CONFIG_PATH)) {
     const config = {
       ...baseConfig(pageTitle, metaDesc),
-      features: captured.map(({ pageLabel, index }, i) => ({
+      features: captured.map(({ filepath, pageLabel, index }, i) => ({
+        screenshot: filepath,
         title: `${pageLabel} — section ${index + 1}`,
         subtitle: "Describe this section.",
         callout: "",
