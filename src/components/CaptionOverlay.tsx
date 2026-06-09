@@ -1,6 +1,6 @@
 import React from "react";
 import { interpolate, useCurrentFrame } from "remotion";
-import { SCROLL_PAUSE_FRAMES } from "../lib/constants";
+import { buildCaptionWindows } from "../lib/scrollTimeline";
 import { SceneCaption } from "../types/project";
 
 interface Props {
@@ -8,12 +8,11 @@ interface Props {
   durationInFrames: number;
 }
 
+const FADE = 8;
+
 export const CaptionOverlay: React.FC<Props> = ({ captions, durationInFrames }) => {
   const frame = useCurrentFrame();
-  const scrollStart = SCROLL_PAUSE_FRAMES;
-  const scrollEnd = durationInFrames - SCROLL_PAUSE_FRAMES;
-  const scrollDuration = scrollEnd - scrollStart;
-  const FADE = 10;
+  const windows = buildCaptionWindows({ durationInFrames, captions });
 
   return (
     <div
@@ -29,15 +28,12 @@ export const CaptionOverlay: React.FC<Props> = ({ captions, durationInFrames }) 
       }}
     >
       {captions.map((caption, i) => {
-        const startFrame = scrollStart + caption.atProgress * scrollDuration;
-        const endFrame =
-          i < captions.length - 1
-            ? scrollStart + captions[i + 1].atProgress * scrollDuration
-            : scrollEnd + SCROLL_PAUSE_FRAMES;
+        const win = windows[i];
+        if (!win) return null;
 
         const opacity = interpolate(
           frame,
-          [startFrame, startFrame + FADE, endFrame - FADE, endFrame],
+          [win.startFrame, win.startFrame + FADE, win.endFrame - FADE, win.endFrame],
           [0, 1, 1, 0],
           { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
         );

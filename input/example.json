@@ -1,0 +1,18 @@
+{
+  "id": "my-product",
+  "name": "My Product",
+  "tagline": "One-line tagline for the product.",
+  "cta": "Get Started Free",
+  "colors": {
+    "bg": "#ffffff",
+    "bgDark": "#111111",
+    "accent": "#0066ff",
+    "text": "#111111",
+    "textMuted": "#666666"
+  },
+  "urls": [
+    "https://example.com",
+    "https://example.com/features",
+    "https://example.com/pricing"
+  ]
+}

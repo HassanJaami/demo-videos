@@ -1,12 +1,12 @@
 import React from "react";
-import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, useVideoConfig } from "remotion";
 import { CaptionOverlay } from "../../../components/CaptionOverlay";
-import { Callout } from "../../../components/Callout";
 import { KenBurns } from "../../../components/KenBurns";
 import { LAPTOP_SCREEN, LaptopFrame } from "../../../components/LaptopFrame";
 import { MOBILE_SCREEN, MobileFrame } from "../../../components/MobileFrame";
 import { ScrollPan } from "../../../components/ScrollPan";
-import { SceneTitle } from "../../../components/SceneTitle";
+import { TextCard } from "../../../components/TextCard";
+import { useCardAnimation, useDeviceAnimation } from "../../../lib/animations";
 import { DEFAULT_FEATURE_FRAMES } from "../../../lib/constants";
 import { FeatureSceneConfig, ProjectColors } from "../../../types/project";
 
@@ -27,43 +27,21 @@ export const FeatureScene: React.FC<Props> = ({
   captions,
   colors,
 }) => {
-  const frame = useCurrentFrame();
   const { width: videoWidth, height: videoHeight } = useVideoConfig();
-
-  const cardOpacity = interpolate(frame, [10, 30], [0, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
-  const cardY = interpolate(frame, [10, 30], [20, 0], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
-  const deviceY = interpolate(frame, [0, 25], [30, 0], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
-  const deviceOpacity = interpolate(frame, [0, 20], [0, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
+  const { cardOpacity, cardY } = useCardAnimation();
+  const { deviceY, deviceOpacity } = useDeviceAnimation();
 
   const isLeft = cardAlign === "left";
 
-  // Resolve container dimensions for ScrollPan
-  const containerDims =
-    device === "laptop"
-      ? LAPTOP_SCREEN
-      : device === "mobile"
-        ? MOBILE_SCREEN
-        : { width: videoWidth, height: videoHeight };
+  const containerDims = resolveContainerDims(device, videoWidth, videoHeight);
 
-  // Screenshot content — scroll pan or KenBurns
   const screenshotContent = scroll ? (
     <ScrollPan
       src={screenshot}
       durationInFrames={durationInFrames}
       containerWidth={containerDims.width}
       containerHeight={containerDims.height}
+      captions={captions}
     />
   ) : (
     <KenBurns
@@ -76,28 +54,31 @@ export const FeatureScene: React.FC<Props> = ({
     />
   );
 
-  // --- Full-bleed mode ---
+  const cardOverlay = (
+    <AbsoluteFill
+      style={{
+        justifyContent: "flex-end",
+        alignItems: isLeft ? "flex-start" : "flex-end",
+        padding: 60,
+        zIndex: 10,
+      }}
+    >
+      <TextCard
+        title={title}
+        subtitle={subtitle}
+        callout={callout}
+        accentColor={colors.accent}
+        opacity={cardOpacity}
+        cardY={cardY}
+      />
+    </AbsoluteFill>
+  );
+
   if (device === "none") {
     return (
       <AbsoluteFill style={{ backgroundColor: colors.bg }}>
         {screenshotContent}
-        <AbsoluteFill
-          style={{
-            justifyContent: "flex-end",
-            alignItems: isLeft ? "flex-start" : "flex-end",
-            padding: 60,
-            zIndex: 10,
-          }}
-        >
-          <TextCard
-            title={title}
-            subtitle={subtitle}
-            callout={callout}
-            accentColor={colors.accent}
-            cardOpacity={cardOpacity}
-            cardY={cardY}
-          />
-        </AbsoluteFill>
+        {cardOverlay}
         {captions && captions.length > 0 && (
           <CaptionOverlay captions={captions} durationInFrames={durationInFrames} />
         )}
@@ -105,45 +86,18 @@ export const FeatureScene: React.FC<Props> = ({
     );
   }
 
-  // --- Device frame mode ---
   return (
     <AbsoluteFill
-      style={{
-        backgroundColor: colors.bg,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
+      style={{ backgroundColor: colors.bg, justifyContent: "center", alignItems: "center" }}
     >
-      <div
-        style={{
-          transform: `translateY(${deviceY}px)`,
-          opacity: deviceOpacity,
-        }}
-      >
+      <div style={{ transform: `translateY(${deviceY}px)`, opacity: deviceOpacity }}>
         {device === "laptop" ? (
           <LaptopFrame>{screenshotContent}</LaptopFrame>
         ) : (
           <MobileFrame>{screenshotContent}</MobileFrame>
         )}
       </div>
-
-      <AbsoluteFill
-        style={{
-          justifyContent: "flex-end",
-          alignItems: isLeft ? "flex-start" : "flex-end",
-          padding: 60,
-          zIndex: 10,
-        }}
-      >
-        <TextCard
-          title={title}
-          subtitle={subtitle}
-          callout={callout}
-          accentColor={colors.accent}
-          cardOpacity={cardOpacity}
-          cardY={cardY}
-        />
-      </AbsoluteFill>
+      {cardOverlay}
       {captions && captions.length > 0 && (
         <CaptionOverlay captions={captions} durationInFrames={durationInFrames} />
       )}
@@ -151,31 +105,12 @@ export const FeatureScene: React.FC<Props> = ({
   );
 };
 
-const TextCard: React.FC<{
-  title: string;
-  subtitle: string;
-  callout?: string;
-  accentColor: string;
-  cardOpacity: number;
-  cardY: number;
-}> = ({ title, subtitle, callout, accentColor, cardOpacity, cardY }) => (
-  <div
-    style={{
-      backgroundColor: "rgba(28,28,26,0.88)",
-      borderRadius: 20,
-      padding: "36px 44px",
-      maxWidth: 520,
-      opacity: cardOpacity,
-      transform: `translateY(${cardY}px)`,
-      backdropFilter: "blur(8px)",
-    }}
-  >
-    <SceneTitle
-      title={title}
-      subtitle={subtitle}
-      color="#ffffff"
-      subtitleColor="rgba(255,255,255,0.65)"
-    />
-    {callout && <Callout label={callout} delay={30} bg={accentColor} />}
-  </div>
-);
+function resolveContainerDims(
+  device: string,
+  videoWidth: number,
+  videoHeight: number
+): { width: number; height: number } {
+  if (device === "laptop") return LAPTOP_SCREEN;
+  if (device === "mobile") return MOBILE_SCREEN;
+  return { width: videoWidth, height: videoHeight };
+}

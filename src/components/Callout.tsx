@@ -1,5 +1,5 @@
 import React from "react";
-import { interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
+import { usePopIn } from "../lib/animations";
 import { theme } from "../lib/theme";
 
 interface Props {
@@ -15,14 +15,7 @@ export const Callout: React.FC<Props> = ({
   bg = theme.colors.accent,
   color = theme.colors.white,
 }) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-
-  const scale = spring({ fps, frame: frame - delay, config: { damping: 70, mass: 0.6 } });
-  const opacity = interpolate(frame, [delay, delay + 10], [0, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
+  const { scale, opacity } = usePopIn(delay);
 
   return (
     <div

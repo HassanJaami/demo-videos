@@ -9,12 +9,15 @@ import {
   useCurrentFrame,
 } from "remotion";
 import { SCROLL_PAUSE_FRAMES } from "../lib/constants";
+import { buildScrollKeyframes } from "../lib/scrollTimeline";
+import { SceneCaption } from "../types/project";
 
 interface Props {
   src: string;
   durationInFrames: number;
   containerWidth: number;
   containerHeight: number;
+  captions?: SceneCaption[];
   pauseFrames?: number;
 }
 
@@ -23,6 +26,7 @@ export const ScrollPan: React.FC<Props> = ({
   durationInFrames,
   containerWidth,
   containerHeight,
+  captions,
   pauseFrames = SCROLL_PAUSE_FRAMES,
 }) => {
   const frame = useCurrentFrame();
@@ -38,19 +42,32 @@ export const ScrollPan: React.FC<Props> = ({
 
   if (!dims) return null;
 
-  // Displayed height when image fills containerWidth at natural aspect ratio
   const displayedHeight = Math.round((dims.height / dims.width) * containerWidth);
   const maxScroll = Math.max(0, displayedHeight - containerHeight);
 
-  const scrollStart = pauseFrames;
-  const scrollEnd = durationInFrames - pauseFrames;
+  let translateY: number;
 
-  const translateY = interpolate(
-    frame,
-    [0, scrollStart, scrollEnd, durationInFrames],
-    [0, 0, -maxScroll, -maxScroll],
-    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
-  );
+  if (captions && captions.length > 0) {
+    // Pause at each caption's scroll position so sections are fully visible
+    const { frames, progresses } = buildScrollKeyframes({
+      durationInFrames,
+      captions,
+      holdFrames: pauseFrames,
+    });
+    const progress = interpolate(frame, frames, progresses, {
+      extrapolateLeft: "clamp",
+      extrapolateRight: "clamp",
+    });
+    translateY = progress * -maxScroll;
+  } else {
+    // Smooth linear scroll (no captions / backward compat)
+    translateY = interpolate(
+      frame,
+      [0, pauseFrames, durationInFrames - pauseFrames, durationInFrames],
+      [0, 0, -maxScroll, -maxScroll],
+      { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+    );
+  }
 
   return (
     <div style={{ width: "100%", height: "100%", overflow: "hidden" }}>

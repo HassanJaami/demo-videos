@@ -1,7 +1,8 @@
 import React from "react";
-import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill } from "remotion";
 import { KenBurns } from "../../../components/KenBurns";
-import { SceneTitle } from "../../../components/SceneTitle";
+import { TextCard } from "../../../components/TextCard";
+import { useCardAnimation, usePopIn } from "../../../lib/animations";
 import { theme } from "../../../lib/theme";
 
 const FitBadge: React.FC<{ label: string; count: number; bg: string; delay: number }> = ({
@@ -10,14 +11,7 @@ const FitBadge: React.FC<{ label: string; count: number; bg: string; delay: numb
   bg,
   delay,
 }) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const scale = spring({ fps, frame: frame - delay, config: { damping: 70, mass: 0.6 } });
-  const opacity = interpolate(frame, [delay, delay + 10], [0, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
-
+  const { scale, opacity } = usePopIn(delay);
   return (
     <div
       style={{
@@ -41,54 +35,31 @@ const FitBadge: React.FC<{ label: string; count: number; bg: string; delay: numb
 };
 
 export const Schools: React.FC = () => {
-  const frame = useCurrentFrame();
-
-  const cardOpacity = interpolate(frame, [10, 30], [0, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
-  const cardY = interpolate(frame, [10, 30], [20, 0], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
+  const { cardOpacity, cardY } = useCardAnimation();
 
   return (
     <AbsoluteFill style={{ backgroundColor: theme.colors.bg }}>
-      {/* Full screenshot */}
       <KenBurns
         src="scoutside/screenshots/03-schools.png"
         durationInFrames={150}
         startScale={1}
         endScale={1.04}
-        startX={0}
         endX={-10}
       />
-
-      {/* Floating text card — bottom left */}
       <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "flex-start", padding: 60, zIndex: 10 }}>
-        <div
-          style={{
-            backgroundColor: "rgba(28,28,26,0.88)",
-            borderRadius: 20,
-            padding: "36px 44px",
-            maxWidth: 580,
-            opacity: cardOpacity,
-            transform: `translateY(${cardY}px)`,
-            backdropFilter: "blur(8px)",
-          }}
+        <TextCard
+          title="Programs Where You Align"
+          subtitle="Ranked by fit — not just division or geography."
+          maxWidth={580}
+          opacity={cardOpacity}
+          cardY={cardY}
         >
-          <SceneTitle
-            title="Programs Where You Align"
-            subtitle="Ranked by fit — not just division or geography."
-            color={theme.colors.white}
-            subtitleColor="rgba(255,255,255,0.65)"
-          />
           <div style={{ display: "flex", gap: 16, marginTop: 28 }}>
             <FitBadge label="Strong Fit" count={79} bg={theme.colors.strongFit} delay={25} />
             <FitBadge label="Possible Fit" count={107} bg={theme.colors.accent} delay={35} />
             <FitBadge label="Reach" count={106} bg={theme.colors.reach} delay={45} />
           </div>
-        </div>
+        </TextCard>
       </AbsoluteFill>
     </AbsoluteFill>
   );

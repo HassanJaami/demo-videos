@@ -1,21 +1,29 @@
 import React from "react";
 import { AbsoluteFill, Series } from "remotion";
+import { ProjectIntro } from "../ProjectShowcase/scenes/Intro";
+import { ProjectOutro } from "../ProjectShowcase/scenes/Outro";
+import { theme } from "../../lib/theme";
+import { ProjectColors } from "../../types/project";
 import { Dashboard } from "./scenes/Dashboard";
-import { Intro } from "./scenes/Intro";
 import { Outreach } from "./scenes/Outreach";
-import { Outro } from "./scenes/Outro";
 import { Schools } from "./scenes/Schools";
 import { YourLane } from "./scenes/YourLane";
 
 // Total: 750 frames @ 30fps = 25 seconds
-// Intro: 60 | Dashboard: 150 | YourLane: 150 | Schools: 150 | Outreach: 150 | Outro: 90
+const COLORS: ProjectColors = {
+  bg: theme.colors.bg,
+  bgDark: theme.colors.bgDark,
+  accent: theme.colors.accent,
+  text: theme.colors.text,
+  textMuted: theme.colors.textMuted,
+};
 
 export const Scoutside: React.FC = () => {
   return (
     <AbsoluteFill>
       <Series>
         <Series.Sequence durationInFrames={60}>
-          <Intro />
+          <ProjectIntro name="scoutside" tagline="College recruiting, finally clear." colors={COLORS} />
         </Series.Sequence>
         <Series.Sequence durationInFrames={150}>
           <Dashboard />
@@ -30,7 +38,7 @@ export const Scoutside: React.FC = () => {
           <Outreach />
         </Series.Sequence>
         <Series.Sequence durationInFrames={90}>
-          <Outro />
+          <ProjectOutro name="scoutside" cta="Your recruiting journey starts here." colors={COLORS} />
         </Series.Sequence>
       </Series>
     </AbsoluteFill>

@@ -7,6 +7,7 @@
 import { chromium, Page } from "playwright";
 import fs from "fs";
 import path from "path";
+import { goto, preScroll, slug, VIEWPORT_H, VIEWPORT_W } from "./lib/capture-utils";
 
 const [, , url, projectId, flag] = process.argv;
 const FULL_PAGE = flag === "--full-page";
@@ -16,49 +17,14 @@ if (!url || !projectId) {
   console.error("Usage: tsx scripts/capture.ts <url> <project-id> [--full-page|--nav]");
   process.exit(1);
 }
-
-const VIEWPORT_W = 1920;
-const VIEWPORT_H = 1080;
 const SCREENSHOTS_DIR = path.resolve(`./public/${projectId}/screenshots`);
 const CONFIG_PATH = path.resolve(`./public/${projectId}/config.json`);
-
-const slug = (text: string) =>
-  text.toLowerCase().trim().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
 async function openPage() {
   const browser = await chromium.launch();
   const page = await browser.newPage();
   await page.setViewportSize({ width: VIEWPORT_W, height: VIEWPORT_H });
   return { browser, page };
-}
-
-async function goto(page: Page, target: string) {
-  await page.goto(target, { waitUntil: "load", timeout: 30_000 });
-  await page.waitForTimeout(2000);
-
-  for (const sel of [
-    'button:has-text("Accept All")',
-    'button:has-text("Accept")',
-    'button:has-text("Got it")',
-    '[aria-label="Accept cookies"]',
-  ]) {
-    const btn = page.locator(sel).first();
-    if (await btn.isVisible().catch(() => false)) {
-      await btn.click().catch(() => {});
-      await page.waitForTimeout(300);
-      break;
-    }
-  }
-}
-
-async function preScroll(page: Page) {
-  const h = await page.evaluate(() => document.body.scrollHeight);
-  for (let y = 0; y <= h; y += VIEWPORT_H) {
-    await page.evaluate((pos) => window.scrollTo(0, pos), y);
-    await page.waitForTimeout(80);
-  }
-  await page.evaluate(() => window.scrollTo(0, 0));
-  await page.waitForTimeout(400);
 }
 
 async function fullPageShot(page: Page, filepath: string) {

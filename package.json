@@ -7,9 +7,13 @@
     "start": "npx remotion studio",
     "sync": "tsx scripts/sync-config.ts",
     "capture": "tsx scripts/capture.ts",
+    "pipeline": "tsx scripts/pipeline.ts",
+    "analyze": "tsx scripts/analyze.ts",
+    "build-config": "tsx scripts/build-config.ts",
     "render:all": "tsx scripts/render-all.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.102.0",
     "@remotion/bundler": "4.0.290",
     "@remotion/cli": "4.0.290",
     "@remotion/renderer": "4.0.290",

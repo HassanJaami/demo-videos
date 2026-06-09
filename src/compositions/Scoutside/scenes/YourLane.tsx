@@ -1,19 +1,13 @@
 import React from "react";
-import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill } from "remotion";
 import { Callout } from "../../../components/Callout";
 import { KenBurns } from "../../../components/KenBurns";
-import { SceneTitle } from "../../../components/SceneTitle";
+import { TextCard } from "../../../components/TextCard";
+import { useCardAnimation, usePopIn } from "../../../lib/animations";
 import { theme } from "../../../lib/theme";
 
 const Tier: React.FC<{ label: string; color: string; delay: number }> = ({ label, color, delay }) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const scale = spring({ fps, frame: frame - delay, config: { damping: 70, mass: 0.6 } });
-  const opacity = interpolate(frame, [delay, delay + 10], [0, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
-
+  const { scale, opacity } = usePopIn(delay);
   return (
     <div
       style={{
@@ -35,55 +29,33 @@ const Tier: React.FC<{ label: string; color: string; delay: number }> = ({ label
 };
 
 export const YourLane: React.FC = () => {
-  const frame = useCurrentFrame();
-
-  const cardOpacity = interpolate(frame, [10, 30], [0, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
-  const cardY = interpolate(frame, [10, 30], [20, 0], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
+  const { cardOpacity, cardY } = useCardAnimation();
 
   return (
     <AbsoluteFill style={{ backgroundColor: theme.colors.bg }}>
-      {/* Full screenshot */}
       <KenBurns
         src="scoutside/screenshots/02-your-lane.png"
         durationInFrames={150}
         startScale={1}
         endScale={1.04}
-        startY={0}
         endY={-15}
       />
-
-      {/* Floating text card — bottom right */}
       <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "flex-end", padding: 60, zIndex: 10 }}>
-        <div
-          style={{
-            backgroundColor: "rgba(28,28,26,0.88)",
-            borderRadius: 20,
-            padding: "36px 44px",
-            maxWidth: 520,
-            opacity: cardOpacity,
-            transform: `translateY(${cardY}px)`,
-            backdropFilter: "blur(8px)",
-          }}
+        <TextCard
+          title="Know Your Lane"
+          subtitle="See exactly where your profile fits — and why — based on real NCAA data."
+          callout="Backed by historical NCAA data"
+          accentColor={theme.colors.accent}
+          calloutDelay={55}
+          opacity={cardOpacity}
+          cardY={cardY}
         >
-          <SceneTitle
-            title="Know Your Lane"
-            subtitle="See exactly where your profile fits — and why — based on real NCAA data."
-            color={theme.colors.white}
-            subtitleColor="rgba(255,255,255,0.65)"
-          />
           <div style={{ marginTop: 28, display: "flex" }}>
             <Tier label="Strong Fit" color={theme.colors.strongFit} delay={25} />
             <Tier label="Possible Fit" color={theme.colors.accent} delay={35} />
             <Tier label="Reach" color={theme.colors.reach} delay={45} />
           </div>
-          <Callout label="Backed by historical NCAA data" delay={55} bg={theme.colors.accent} />
-        </div>
+        </TextCard>
       </AbsoluteFill>
     </AbsoluteFill>
   );
