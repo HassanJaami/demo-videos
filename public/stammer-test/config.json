@@ -37,6 +37,7 @@
       "device": "laptop",
       "scroll": true,
       "durationInFrames": 390,
+      "cropBottom": 0.06,
       "captions": [
         { "text": "Turn Visitors into Paying Customers", "atProgress": 0 },
         { "text": "Why Businesses Love AI Chatbots", "atProgress": 0.15 },
@@ -55,6 +56,7 @@
       "device": "laptop",
       "scroll": true,
       "durationInFrames": 390,
+      "cropBottom": 0.05,
       "captions": [
         { "text": "Convert Calls Into Revenue", "atProgress": 0 },
         { "text": "How Voice Agents Work", "atProgress": 0.17 },
@@ -73,6 +75,7 @@
       "device": "laptop",
       "scroll": true,
       "durationInFrames": 360,
+      "cropBottom": 0.06,
       "captions": [
         { "text": "Launch Your Own AI SaaS Empire", "atProgress": 0 },
         { "text": "#1 White Label SaaS Platform for AI", "atProgress": 0.18 },
@@ -90,6 +93,7 @@
       "device": "laptop",
       "scroll": true,
       "durationInFrames": 330,
+      "cropBottom": 0.09,
       "captions": [
         { "text": "Starter · Full SaaS · Enterprise Plans", "atProgress": 0 },
         { "text": "AI Chatbot & Voice Agent Add-Ons", "atProgress": 0.48 },
@@ -104,6 +108,7 @@
       "device": "laptop",
       "scroll": true,
       "durationInFrames": 300,
+      "cropBottom": 0.16,
       "captions": [
         { "text": "Comprehensive Documentation", "atProgress": 0 },
         { "text": "Submit a Support Ticket", "atProgress": 0.22 },
@@ -119,6 +124,7 @@
       "device": "laptop",
       "scroll": true,
       "durationInFrames": 420,
+      "cropBottom": 0.04,
       "captions": [
         { "text": "AI Agents at Enterprise Scale", "atProgress": 0 },
         { "text": "RunSignup: Proven at Scale", "atProgress": 0.13 },

@@ -25,6 +25,7 @@ export const FeatureScene: React.FC<Props> = ({
   durationInFrames = DEFAULT_FEATURE_FRAMES,
   kenBurns = {},
   captions,
+  cropBottom,
   colors,
 }) => {
   const { width: videoWidth, height: videoHeight } = useVideoConfig();
@@ -42,6 +43,7 @@ export const FeatureScene: React.FC<Props> = ({
       containerWidth={containerDims.width}
       containerHeight={containerDims.height}
       captions={captions}
+      cropBottom={cropBottom}
     />
   ) : (
     <KenBurns

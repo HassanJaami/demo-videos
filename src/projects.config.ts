@@ -175,6 +175,7 @@ export const projects: ProjectConfig[] = [
         "device": "laptop",
         "scroll": true,
         "durationInFrames": 390,
+        "cropBottom": 0.06,
         "captions": [
           {
             "text": "Turn Visitors into Paying Customers",
@@ -215,6 +216,7 @@ export const projects: ProjectConfig[] = [
         "device": "laptop",
         "scroll": true,
         "durationInFrames": 390,
+        "cropBottom": 0.05,
         "captions": [
           {
             "text": "Convert Calls Into Revenue",
@@ -255,6 +257,7 @@ export const projects: ProjectConfig[] = [
         "device": "laptop",
         "scroll": true,
         "durationInFrames": 360,
+        "cropBottom": 0.06,
         "captions": [
           {
             "text": "Launch Your Own AI SaaS Empire",
@@ -291,6 +294,7 @@ export const projects: ProjectConfig[] = [
         "device": "laptop",
         "scroll": true,
         "durationInFrames": 330,
+        "cropBottom": 0.09,
         "captions": [
           {
             "text": "Starter · Full SaaS · Enterprise Plans",
@@ -315,6 +319,7 @@ export const projects: ProjectConfig[] = [
         "device": "laptop",
         "scroll": true,
         "durationInFrames": 300,
+        "cropBottom": 0.16,
         "captions": [
           {
             "text": "Comprehensive Documentation",
@@ -343,6 +348,7 @@ export const projects: ProjectConfig[] = [
         "device": "laptop",
         "scroll": true,
         "durationInFrames": 420,
+        "cropBottom": 0.04,
         "captions": [
           {
             "text": "AI Agents at Enterprise Scale",

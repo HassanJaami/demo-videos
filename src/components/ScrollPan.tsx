@@ -19,6 +19,7 @@ interface Props {
   containerHeight: number;
   captions?: SceneCaption[];
   pauseFrames?: number;
+  cropBottom?: number; // 0–1 fraction of scaled image height to cut from bottom of scroll range
 }
 
 export const ScrollPan: React.FC<Props> = ({
@@ -28,6 +29,7 @@ export const ScrollPan: React.FC<Props> = ({
   containerHeight,
   captions,
   pauseFrames = SCROLL_PAUSE_FRAMES,
+  cropBottom = 0,
 }) => {
   const frame = useCurrentFrame();
   const [dims, setDims] = useState<{ width: number; height: number } | null>(null);
@@ -43,7 +45,8 @@ export const ScrollPan: React.FC<Props> = ({
   if (!dims) return null;
 
   const displayedHeight = Math.round((dims.height / dims.width) * containerWidth);
-  const maxScroll = Math.max(0, displayedHeight - containerHeight);
+  const cropPx = Math.round(cropBottom * displayedHeight);
+  const maxScroll = Math.max(0, displayedHeight - containerHeight - cropPx);
 
   let translateY: number;
 

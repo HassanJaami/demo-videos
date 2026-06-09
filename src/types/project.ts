@@ -19,6 +19,7 @@ export interface FeatureSceneJSON {
     endY?: number;
   };
   captions?: SceneCaption[];
+  cropBottom?: number; // 0–1 fraction of image height to exclude from scroll range (e.g. to skip repeated footer)
 }
 
 export interface ProjectConfigJSON {
