@@ -21,6 +21,7 @@ export const projects: ProjectConfig[] = [
         "subtitle": "Personalized insights based on your profile, position, and graduation year.",
         "callout": "428 matched programs",
         "cardAlign": "left",
+        "device": "laptop",
         "screenshot": "scoutside/screenshots/01-landing.png"
       },
       {
@@ -28,12 +29,14 @@ export const projects: ProjectConfig[] = [
         "subtitle": "See exactly where your profile fits — and why — based on real NCAA data.",
         "callout": "Backed by historical NCAA data",
         "cardAlign": "right",
+        "device": "laptop",
         "screenshot": "scoutside/screenshots/02-your-lane.png"
       },
       {
         "title": "Programs Where You Align",
         "subtitle": "Ranked by fit — not just division or geography.",
         "cardAlign": "left",
+        "device": "laptop",
         "screenshot": "scoutside/screenshots/03-schools.png"
       },
       {
@@ -41,6 +44,7 @@ export const projects: ProjectConfig[] = [
         "subtitle": "AI-powered outreach that helps you draft emails, improve your tone, and follow up at the right time.",
         "callout": "AI-powered · Your data stays private",
         "cardAlign": "right",
+        "device": "laptop",
         "screenshot": "scoutside/screenshots/04-outreach.png"
       }
     ]

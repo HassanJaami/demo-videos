@@ -4,6 +4,7 @@ export interface FeatureSceneJSON {
   subtitle: string;
   callout?: string;
   cardAlign?: "left" | "right";
+  device?: "laptop" | "mobile" | "none";
   durationInFrames?: number;
   kenBurns?: {
     startScale?: number;

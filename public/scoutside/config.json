@@ -14,24 +14,28 @@
       "title": "Your Recruiting Dashboard",
       "subtitle": "Personalized insights based on your profile, position, and graduation year.",
       "callout": "428 matched programs",
-      "cardAlign": "left"
+      "cardAlign": "left",
+      "device": "laptop"
     },
     {
       "title": "Know Your Lane",
       "subtitle": "See exactly where your profile fits — and why — based on real NCAA data.",
       "callout": "Backed by historical NCAA data",
-      "cardAlign": "right"
+      "cardAlign": "right",
+      "device": "laptop"
     },
     {
       "title": "Programs Where You Align",
       "subtitle": "Ranked by fit — not just division or geography.",
-      "cardAlign": "left"
+      "cardAlign": "left",
+      "device": "laptop"
     },
     {
       "title": "Connect With Coaches",
       "subtitle": "AI-powered outreach that helps you draft emails, improve your tone, and follow up at the right time.",
       "callout": "AI-powered · Your data stays private",
-      "cardAlign": "right"
+      "cardAlign": "right",
+      "device": "laptop"
     }
   ]
 }
