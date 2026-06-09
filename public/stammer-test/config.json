@@ -1,7 +1,7 @@
 {
-  "name": "stammer-test",
+  "name": "Stammer.ai",
   "tagline": "Build white label AI chatbots and AI voice agents that can answer questions, generate leads, schedule appointments & more.",
-  "cta": "Try it free",
+  "cta": "Start Building Free",
   "colors": {
     "bg": "#ffffff",
     "bgDark": "#111111",
@@ -11,57 +11,57 @@
   },
   "features": [
     {
-      "title": "Home",
-      "subtitle": "Describe this page.",
-      "callout": "",
+      "title": "Build AI Agents in 60 Seconds",
+      "subtitle": "Deploy AI chatbots and voice agents across every channel — websites, social, and more — without writing a single line of code.",
+      "callout": "Built for every industry",
       "cardAlign": "left",
       "device": "laptop",
       "scroll": true
     },
     {
       "title": "AI Chat",
-      "subtitle": "Describe this page.",
-      "callout": "",
+      "subtitle": "Turn website visitors into paying customers automatically. Customize your chatbot, add your knowledge base, and integrate anywhere.",
+      "callout": "Sell more with less effort",
       "cardAlign": "right",
       "device": "laptop",
       "scroll": true
     },
     {
-      "title": "AI Voice",
-      "subtitle": "Describe this page.",
-      "callout": "",
+      "title": "AI Voice Agents",
+      "subtitle": "AI voice agents that convert inbound and outbound calls into revenue — handling bookings, FAQs, and lead qualification 24/7.",
+      "callout": "Handles real calls, real leads",
       "cardAlign": "left",
       "device": "laptop",
       "scroll": true
     },
     {
-      "title": "White Label",
-      "subtitle": "Describe this page.",
-      "callout": "",
+      "title": "White Label SaaS",
+      "subtitle": "Launch your own AI SaaS empire in under 10 minutes. Resell AI agents under your brand and keep 100% of the revenue.",
+      "callout": "#1 White Label AI Platform",
       "cardAlign": "right",
       "device": "laptop",
       "scroll": true
     },
     {
-      "title": "Pricing",
-      "subtitle": "Describe this page.",
-      "callout": "",
+      "title": "Simple Pricing",
+      "subtitle": "Start at $197/mo or go full SaaS mode at $497/mo. Scale your agency with transparent pricing and no hidden fees.",
+      "callout": "Enterprise pricing available",
       "cardAlign": "left",
       "device": "laptop",
       "scroll": true
     },
     {
-      "title": "Support",
-      "subtitle": "Describe this page.",
-      "callout": "",
+      "title": "Always-On Support",
+      "subtitle": "Docs, daily office hours, YouTube tutorials, and 1-on-1 onboarding calls — expert help is always there when you need it.",
+      "callout": "Response within 24 hours",
       "cardAlign": "right",
       "device": "laptop",
       "scroll": true
     },
     {
-      "title": "Enterprise",
-      "subtitle": "Describe this page.",
-      "callout": "",
+      "title": "Enterprise Scale",
+      "subtitle": "Drop-in AI agent infrastructure built for enterprise — flexible by design, HIPAA compliant, and proven at scale.",
+      "callout": "HIPAA Compliant",
       "cardAlign": "left",
       "device": "laptop",
       "scroll": true

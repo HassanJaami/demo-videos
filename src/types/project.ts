@@ -21,6 +21,7 @@ export interface ProjectConfigJSON {
   cta: string;
   colors: ProjectColors;
   features: FeatureSceneJSON[];
+  music?: string;
 }
 
 // Full runtime config — screenshot path is added by the discovery script
@@ -39,4 +40,5 @@ export interface ProjectColors {
 export interface ProjectConfig extends ProjectConfigJSON {
   id: string;
   features: FeatureSceneConfig[];
+  music?: string;
 }

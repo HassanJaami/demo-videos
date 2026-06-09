@@ -4,6 +4,7 @@ import { ProjectConfig, ProjectConfigJSON } from "../src/types/project";
 
 const PUBLIC_DIR = path.resolve("./public");
 const IMAGE_EXTS = /\.(png|jpg|jpeg|webp|avif)$/i;
+const AUDIO_EXTS = /\.(mp3|aac|wav|ogg|m4a)$/i;
 
 export function discoverProjects(): ProjectConfig[] {
   if (!fs.existsSync(PUBLIC_DIR)) return [];
@@ -34,6 +35,13 @@ export function discoverProjects(): ProjectConfig[] {
         screenshot: screenshots[i] ?? "",
       }));
 
-      return [{ id, ...json, features }];
+      // Auto-detect a music file: first audio file found in the project root
+      const projectDir = path.join(PUBLIC_DIR, id);
+      const musicFile = fs
+        .readdirSync(projectDir)
+        .find((f) => AUDIO_EXTS.test(f) && !f.startsWith("."));
+      const music = musicFile ? `${id}/${musicFile}` : undefined;
+
+      return [{ id, ...json, features, music }];
     });
 }
