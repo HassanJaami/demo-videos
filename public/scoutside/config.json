@@ -1,0 +1,37 @@
+{
+  "name": "scoutside",
+  "tagline": "College recruiting, finally clear.",
+  "cta": "Your recruiting journey starts here.",
+  "colors": {
+    "bg": "#f5f1ec",
+    "bgDark": "#1c1c1a",
+    "accent": "#c9622d",
+    "text": "#2a2a27",
+    "textMuted": "#6b6b67"
+  },
+  "features": [
+    {
+      "title": "Your Recruiting Dashboard",
+      "subtitle": "Personalized insights based on your profile, position, and graduation year.",
+      "callout": "428 matched programs",
+      "cardAlign": "left"
+    },
+    {
+      "title": "Know Your Lane",
+      "subtitle": "See exactly where your profile fits — and why — based on real NCAA data.",
+      "callout": "Backed by historical NCAA data",
+      "cardAlign": "right"
+    },
+    {
+      "title": "Programs Where You Align",
+      "subtitle": "Ranked by fit — not just division or geography.",
+      "cardAlign": "left"
+    },
+    {
+      "title": "Connect With Coaches",
+      "subtitle": "AI-powered outreach that helps you draft emails, improve your tone, and follow up at the right time.",
+      "callout": "AI-powered · Your data stays private",
+      "cardAlign": "right"
+    }
+  ]
+}
