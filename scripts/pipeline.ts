@@ -15,6 +15,9 @@ import { execSync } from "child_process";
 import fs from "fs";
 import path from "path";
 import readline from "readline";
+import { loadEnv } from "./lib/load-env";
+
+loadEnv();
 
 const args = process.argv.slice(2);
 const inputFile = args.find((a) => !a.startsWith("--"));
@@ -28,8 +31,7 @@ if (!inputFile) {
 }
 
 if (!process.env.ANTHROPIC_API_KEY && !SKIP_ANALYZE) {
-  console.error("Error: ANTHROPIC_API_KEY environment variable is not set.");
-  console.error("Set it before running: ANTHROPIC_API_KEY=sk-... tsx scripts/pipeline.ts ...");
+  console.error("Error: ANTHROPIC_API_KEY is not set. Add it to local.env or export it in your shell.");
   process.exit(1);
 }
 

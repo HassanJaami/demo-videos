@@ -1,0 +1,278 @@
+{
+  "id": "stammer",
+  "projectMeta": {
+    "name": "Stammer.ai",
+    "tagline": "Build white label AI chatbots and AI voice agents",
+    "cta": "Start Building Free",
+    "colors": {
+      "bg": "#ffffff",
+      "bgDark": "#111111",
+      "accent": "#0066ff",
+      "text": "#111111",
+      "textMuted": "#666666"
+    }
+  },
+  "analyzedAt": "2026-06-09T13:22:06.082Z",
+  "scenes": [
+    {
+      "url": "https://stammer.ai",
+      "include": true,
+      "fullScreenshot": "screenshots/01-home.png",
+      "pageHeight": 15774,
+      "title": "Build and Deploy AI Agents",
+      "subtitle": "Create, customize, and sell white-label AI chatbots and voice agents across all customer touchpoints with no coding required.",
+      "callout": "14-day free trial",
+      "cardAlign": "left",
+      "importance": 0.95,
+      "captions": [
+        {
+          "text": "Build and deploy AI agents instantly",
+          "atProgress": 0,
+          "subScreenshot": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-00.jpg"
+        },
+        {
+          "text": "Choose between chat or voice agents",
+          "atProgress": 0.2939975500204165,
+          "subScreenshot": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-05.jpg"
+        },
+        {
+          "text": "Scale your AI agency in days",
+          "atProgress": 0.3527970600244998,
+          "subScreenshot": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-06.jpg"
+        },
+        {
+          "text": "White-label, resell, stack revenue streams",
+          "atProgress": 0.4703960800326664,
+          "subScreenshot": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-08.jpg"
+        },
+        {
+          "text": "Integrate seamlessly with existing tech stack",
+          "atProgress": 0.7643936300530829,
+          "subScreenshot": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-13.jpg"
+        },
+        {
+          "text": "Three pricing plans for every need",
+          "atProgress": 0.8231931400571662,
+          "subScreenshot": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-14.jpg"
+        },
+        {
+          "text": "Start selling AI agents today",
+          "atProgress": 0.9407921600653328,
+          "subScreenshot": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-16.jpg"
+        }
+      ]
+    },
+    {
+      "url": "https://stammer.ai/ai-chat",
+      "include": true,
+      "fullScreenshot": "screenshots/02-ai-chat.png",
+      "pageHeight": 15698,
+      "title": "Build and Deploy AI Agents",
+      "subtitle": "Create and sell white-label AI chat and voice agents that handle customer support, lead generation, and appointment booking 24/7 across all channels.",
+      "callout": "14-Day Free Trial",
+      "cardAlign": "right",
+      "importance": 0.95,
+      "captions": [
+        {
+          "text": "Build and deploy AI agents",
+          "atProgress": 0,
+          "subScreenshot": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-00.jpg"
+        },
+        {
+          "text": "Multiple agent deployment options",
+          "atProgress": 0.11821042550280476,
+          "subScreenshot": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-02.jpg"
+        },
+        {
+          "text": "Chat and voice agent comparison",
+          "atProgress": 0.2955260637570119,
+          "subScreenshot": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-05.jpg"
+        },
+        {
+          "text": "Scale AI agency in days",
+          "atProgress": 0.3546312765084143,
+          "subScreenshot": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-06.jpg"
+        },
+        {
+          "text": "White label and revenue opportunities",
+          "atProgress": 0.47284170201121906,
+          "subScreenshot": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-08.jpg"
+        },
+        {
+          "text": "Build and customize your agents",
+          "atProgress": 0.5910521275140238,
+          "subScreenshot": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-10.jpg"
+        },
+        {
+          "text": "Sell agents and earn recurring revenue",
+          "atProgress": 0.6501573402654262,
+          "subScreenshot": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-11.jpg"
+        },
+        {
+          "text": "Integrate with existing tech stack",
+          "atProgress": 0.768367765768231,
+          "subScreenshot": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-13.jpg"
+        },
+        {
+          "text": "Choose your pricing plan",
+          "atProgress": 0.8274729785196333,
+          "subScreenshot": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-14.jpg"
+        }
+      ]
+    },
+    {
+      "url": "https://stammer.ai/ai-voice-agents",
+      "include": true,
+      "fullScreenshot": "screenshots/03-ai-voice.png",
+      "pageHeight": 9575,
+      "title": "AI Voice Agents Convert Calls",
+      "subtitle": "Deploy AI voice agents that handle inbound and outbound calls 24/7, qualify leads, and book appointments automatically with human-like conversations.",
+      "callout": "14-day free trial",
+      "cardAlign": "left",
+      "importance": 0.9,
+      "captions": [
+        {
+          "text": "AI voice agents convert calls into revenue",
+          "atProgress": 0,
+          "subScreenshot": "screenshots/sub/03-ai-voice-agents-stammer-ai-00.jpg"
+        },
+        {
+          "text": "Purchase phone numbers and connect agents",
+          "atProgress": 0.10170688640376692,
+          "subScreenshot": "screenshots/sub/03-ai-voice-agents-stammer-ai-01.jpg"
+        },
+        {
+          "text": "Customize AI agent prompts and behaviors",
+          "atProgress": 0.20341377280753384,
+          "subScreenshot": "screenshots/sub/03-ai-voice-agents-stammer-ai-02.jpg"
+        },
+        {
+          "text": "Train agents with knowledge base files",
+          "atProgress": 0.30512065921130077,
+          "subScreenshot": "screenshots/sub/03-ai-voice-agents-stammer-ai-03.jpg"
+        },
+        {
+          "text": "Inbound and outbound calls in action",
+          "atProgress": 0.6102413184226015,
+          "subScreenshot": "screenshots/sub/03-ai-voice-agents-stammer-ai-06.jpg"
+        },
+        {
+          "text": "Build your brand, not ours exclusively",
+          "atProgress": 0.8136550912301354,
+          "subScreenshot": "screenshots/sub/03-ai-voice-agents-stammer-ai-08.jpg"
+        },
+        {
+          "text": "10000+ leads qualified, proven results",
+          "atProgress": 0.9153619776339023,
+          "subScreenshot": "screenshots/sub/03-ai-voice-agents-stammer-ai-09.jpg"
+        },
+        {
+          "text": "Start selling AI agents in 60 seconds",
+          "atProgress": 1.0170688640376693,
+          "subScreenshot": "screenshots/sub/03-ai-voice-agents-stammer-ai-10.jpg"
+        }
+      ]
+    },
+    {
+      "url": "https://stammer.ai/white-label",
+      "include": true,
+      "fullScreenshot": "screenshots/04-white-label.png",
+      "pageHeight": 15698,
+      "title": "White Label AI Agent Platform",
+      "subtitle": "Build and deploy branded AI chatbots and voice agents to scale your agency business without development overhead.",
+      "callout": "14-day free trial",
+      "cardAlign": "right",
+      "importance": 0.9,
+      "captions": [
+        {
+          "text": "Build and deploy AI agents instantly",
+          "atProgress": 0,
+          "subScreenshot": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-00.jpg"
+        },
+        {
+          "text": "Chat and voice agents for every channel",
+          "atProgress": 0.2955260637570119,
+          "subScreenshot": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-05.jpg"
+        },
+        {
+          "text": "Scale your AI agency in days",
+          "atProgress": 0.3546312765084143,
+          "subScreenshot": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-06.jpg"
+        },
+        {
+          "text": "White label, custom domain, your brand",
+          "atProgress": 0.47284170201121906,
+          "subScreenshot": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-08.jpg"
+        },
+        {
+          "text": "Sell AI agents and get paid recurring",
+          "atProgress": 0.6501573402654262,
+          "subScreenshot": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-11.jpg"
+        },
+        {
+          "text": "Integrate seamlessly with existing tools",
+          "atProgress": 0.768367765768231,
+          "subScreenshot": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-13.jpg"
+        },
+        {
+          "text": "Flexible pricing for agencies at scale",
+          "atProgress": 0.8274729785196333,
+          "subScreenshot": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-14.jpg"
+        },
+        {
+          "text": "Start building your AI agency free",
+          "atProgress": 1.0047886167738405,
+          "subScreenshot": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-17.jpg"
+        }
+      ]
+    },
+    {
+      "url": "https://stammer.ai/pricing",
+      "include": true,
+      "fullScreenshot": "screenshots/05-pricing.png",
+      "pageHeight": 4604,
+      "title": "Stammer.ai Pricing Plans",
+      "subtitle": "Choose from three AI agent pricing tiers designed for agencies, SaaS companies, and enterprises with varying needs and scale.",
+      "callout": "14-day free trial",
+      "cardAlign": "left",
+      "importance": 0.9,
+      "captions": [
+        {
+          "text": "Three flexible pricing plans available",
+          "atProgress": 0,
+          "subScreenshot": "screenshots/sub/05-stammer-ai-white-label-ai-agents-00.jpg"
+        },
+        {
+          "text": "Agency plan with chatbot and voice agents",
+          "atProgress": 0.24517593643586832,
+          "subScreenshot": "screenshots/sub/05-stammer-ai-white-label-ai-agents-01.jpg"
+        },
+        {
+          "text": "Full SaaS mode includes custom functions",
+          "atProgress": 0.24517593643586832,
+          "subScreenshot": "screenshots/sub/05-stammer-ai-white-label-ai-agents-01.jpg"
+        },
+        {
+          "text": "Enterprise custom deployment solutions",
+          "atProgress": 0.24517593643586832,
+          "subScreenshot": "screenshots/sub/05-stammer-ai-white-label-ai-agents-01.jpg"
+        },
+        {
+          "text": "Add-on pricing for extra power",
+          "atProgress": 0.49035187287173665,
+          "subScreenshot": "screenshots/sub/05-stammer-ai-white-label-ai-agents-02.jpg"
+        },
+        {
+          "text": "Detailed FAQ answers pricing questions",
+          "atProgress": 0.735527809307605,
+          "subScreenshot": "screenshots/sub/05-stammer-ai-white-label-ai-agents-03.jpg"
+        },
+        {
+          "text": "Start selling AI agents today free",
+          "atProgress": 0.9807037457434733,
+          "subScreenshot": "screenshots/sub/05-stammer-ai-white-label-ai-agents-04.jpg"
+        }
+      ]
+    }
+  ]
+}

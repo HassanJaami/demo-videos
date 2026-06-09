@@ -1,4 +1,5 @@
 {
+  "id": "stammer",
   "name": "Stammer.ai",
   "tagline": "Build white label AI chatbots and AI voice agents",
   "cta": "Start Building Free",
@@ -9,5 +10,11 @@
     "text": "#111111",
     "textMuted": "#666666"
   },
-  "features": []
+  "urls": [
+    "https://stammer.ai",
+    "https://stammer.ai/ai-chat",
+    "https://stammer.ai/ai-voice-agents",
+    "https://stammer.ai/white-label",
+    "https://stammer.ai/pricing"
+  ]
 }

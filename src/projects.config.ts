@@ -51,6 +51,20 @@ export const projects: ProjectConfig[] = [
   },
   {
     "id": "stammer",
+    "name": "Stammer.ai",
+    "tagline": "Build white label AI chatbots and AI voice agents",
+    "cta": "Start Building Free",
+    "colors": {
+      "bg": "#ffffff",
+      "bgDark": "#111111",
+      "accent": "#0066ff",
+      "text": "#111111",
+      "textMuted": "#666666"
+    },
+    "features": []
+  },
+  {
+    "id": "stammer-old",
     "name": "stammer.ai",
     "tagline": "Build and Deploy AI Agents",
     "cta": "Start building for free — no credit card required.",
@@ -68,7 +82,7 @@ export const projects: ProjectConfig[] = [
         "callout": "35K+ Live Agents · 12M+ Conversations · 99.9% Uptime",
         "cardAlign": "left",
         "device": "laptop",
-        "screenshot": "stammer/screenshots/01-landing.png"
+        "screenshot": "stammer-old/screenshots/01-landing.png"
       },
       {
         "title": "White Label AI Voice Agents & Chatbots",
@@ -76,7 +90,7 @@ export const projects: ProjectConfig[] = [
         "callout": "Chat · Voice · 6+ Channels",
         "cardAlign": "right",
         "device": "laptop",
-        "screenshot": "stammer/screenshots/02-white-label.png"
+        "screenshot": "stammer-old/screenshots/02-white-label.png"
       },
       {
         "title": "Scale Your AI Agency in Days, Not Months",
@@ -84,7 +98,7 @@ export const projects: ProjectConfig[] = [
         "callout": "White Label · Client Portal · API Integration",
         "cardAlign": "left",
         "device": "laptop",
-        "screenshot": "stammer/screenshots/03-white-label.png"
+        "screenshot": "stammer-old/screenshots/03-white-label.png"
       },
       {
         "title": "Position, Price, and Profit — Your Way",
@@ -92,7 +106,7 @@ export const projects: ProjectConfig[] = [
         "callout": "Scale from $0 to $50K MRR in 6 months",
         "cardAlign": "right",
         "device": "laptop",
-        "screenshot": "stammer/screenshots/04-reseller.png"
+        "screenshot": "stammer-old/screenshots/04-reseller.png"
       }
     ]
   },

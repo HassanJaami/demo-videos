@@ -6,3 +6,4 @@ dist/
 *.webm
 *.mov
 .DS_Store
+local.env

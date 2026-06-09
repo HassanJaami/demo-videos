@@ -1,0 +1,530 @@
+{
+  "id": "stammer",
+  "projectMeta": {
+    "name": "Stammer.ai",
+    "tagline": "Build white label AI chatbots and AI voice agents",
+    "cta": "Start Building Free",
+    "colors": {
+      "bg": "#ffffff",
+      "bgDark": "#111111",
+      "accent": "#0066ff",
+      "text": "#111111",
+      "textMuted": "#666666"
+    }
+  },
+  "capturedAt": "2026-06-09T13:14:26.502Z",
+  "viewportWidth": 1920,
+  "viewportHeight": 1080,
+  "scenes": [
+    {
+      "url": "https://stammer.ai",
+      "index": 1,
+      "pageTitle": "White Label AI Agents for Chat & Voice | Stammer AI",
+      "urlSlug": "white-label-ai-agents-for-chat-voice-sta",
+      "pageHeight": 15774,
+      "viewportHeight": 1080,
+      "maxScrollY": 14694,
+      "fullScreenshot": "screenshots/01-home.png",
+      "subScreenshots": [
+        {
+          "index": 0,
+          "filename": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-00.jpg",
+          "scrollY": 0,
+          "atProgress": 0
+        },
+        {
+          "index": 1,
+          "filename": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-01.jpg",
+          "scrollY": 864,
+          "atProgress": 0.0587995100040833
+        },
+        {
+          "index": 2,
+          "filename": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-02.jpg",
+          "scrollY": 1728,
+          "atProgress": 0.1175990200081666
+        },
+        {
+          "index": 3,
+          "filename": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-03.jpg",
+          "scrollY": 2592,
+          "atProgress": 0.1763985300122499
+        },
+        {
+          "index": 4,
+          "filename": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-04.jpg",
+          "scrollY": 3456,
+          "atProgress": 0.2351980400163332
+        },
+        {
+          "index": 5,
+          "filename": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-05.jpg",
+          "scrollY": 4320,
+          "atProgress": 0.2939975500204165
+        },
+        {
+          "index": 6,
+          "filename": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-06.jpg",
+          "scrollY": 5184,
+          "atProgress": 0.3527970600244998
+        },
+        {
+          "index": 7,
+          "filename": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-07.jpg",
+          "scrollY": 6048,
+          "atProgress": 0.4115965700285831
+        },
+        {
+          "index": 8,
+          "filename": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-08.jpg",
+          "scrollY": 6912,
+          "atProgress": 0.4703960800326664
+        },
+        {
+          "index": 9,
+          "filename": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-09.jpg",
+          "scrollY": 7776,
+          "atProgress": 0.5291955900367497
+        },
+        {
+          "index": 10,
+          "filename": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-10.jpg",
+          "scrollY": 8640,
+          "atProgress": 0.587995100040833
+        },
+        {
+          "index": 11,
+          "filename": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-11.jpg",
+          "scrollY": 9504,
+          "atProgress": 0.6467946100449163
+        },
+        {
+          "index": 12,
+          "filename": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-12.jpg",
+          "scrollY": 10368,
+          "atProgress": 0.7055941200489996
+        },
+        {
+          "index": 13,
+          "filename": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-13.jpg",
+          "scrollY": 11232,
+          "atProgress": 0.7643936300530829
+        },
+        {
+          "index": 14,
+          "filename": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-14.jpg",
+          "scrollY": 12096,
+          "atProgress": 0.8231931400571662
+        },
+        {
+          "index": 15,
+          "filename": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-15.jpg",
+          "scrollY": 12960,
+          "atProgress": 0.8819926500612495
+        },
+        {
+          "index": 16,
+          "filename": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-16.jpg",
+          "scrollY": 13824,
+          "atProgress": 0.9407921600653328
+        },
+        {
+          "index": 17,
+          "filename": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-17.jpg",
+          "scrollY": 14688,
+          "atProgress": 0.9995916700694161
+        },
+        {
+          "index": 18,
+          "filename": "screenshots/sub/01-white-label-ai-agents-for-chat-voice-sta-18.jpg",
+          "scrollY": 15552,
+          "atProgress": 1.0583911800734993
+        }
+      ]
+    },
+    {
+      "url": "https://stammer.ai/ai-chat",
+      "index": 2,
+      "pageTitle": "White Label AI Agents for Chat & Voice | Stammer AI",
+      "urlSlug": "white-label-ai-agents-for-chat-voice-sta",
+      "pageHeight": 15698,
+      "viewportHeight": 1080,
+      "maxScrollY": 14618,
+      "fullScreenshot": "screenshots/02-ai-chat.png",
+      "subScreenshots": [
+        {
+          "index": 0,
+          "filename": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-00.jpg",
+          "scrollY": 0,
+          "atProgress": 0
+        },
+        {
+          "index": 1,
+          "filename": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-01.jpg",
+          "scrollY": 864,
+          "atProgress": 0.05910521275140238
+        },
+        {
+          "index": 2,
+          "filename": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-02.jpg",
+          "scrollY": 1728,
+          "atProgress": 0.11821042550280476
+        },
+        {
+          "index": 3,
+          "filename": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-03.jpg",
+          "scrollY": 2592,
+          "atProgress": 0.17731563825420715
+        },
+        {
+          "index": 4,
+          "filename": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-04.jpg",
+          "scrollY": 3456,
+          "atProgress": 0.23642085100560953
+        },
+        {
+          "index": 5,
+          "filename": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-05.jpg",
+          "scrollY": 4320,
+          "atProgress": 0.2955260637570119
+        },
+        {
+          "index": 6,
+          "filename": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-06.jpg",
+          "scrollY": 5184,
+          "atProgress": 0.3546312765084143
+        },
+        {
+          "index": 7,
+          "filename": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-07.jpg",
+          "scrollY": 6048,
+          "atProgress": 0.41373648925981665
+        },
+        {
+          "index": 8,
+          "filename": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-08.jpg",
+          "scrollY": 6912,
+          "atProgress": 0.47284170201121906
+        },
+        {
+          "index": 9,
+          "filename": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-09.jpg",
+          "scrollY": 7776,
+          "atProgress": 0.5319469147626215
+        },
+        {
+          "index": 10,
+          "filename": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-10.jpg",
+          "scrollY": 8640,
+          "atProgress": 0.5910521275140238
+        },
+        {
+          "index": 11,
+          "filename": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-11.jpg",
+          "scrollY": 9504,
+          "atProgress": 0.6501573402654262
+        },
+        {
+          "index": 12,
+          "filename": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-12.jpg",
+          "scrollY": 10368,
+          "atProgress": 0.7092625530168286
+        },
+        {
+          "index": 13,
+          "filename": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-13.jpg",
+          "scrollY": 11232,
+          "atProgress": 0.768367765768231
+        },
+        {
+          "index": 14,
+          "filename": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-14.jpg",
+          "scrollY": 12096,
+          "atProgress": 0.8274729785196333
+        },
+        {
+          "index": 15,
+          "filename": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-15.jpg",
+          "scrollY": 12960,
+          "atProgress": 0.8865781912710358
+        },
+        {
+          "index": 16,
+          "filename": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-16.jpg",
+          "scrollY": 13824,
+          "atProgress": 0.9456834040224381
+        },
+        {
+          "index": 17,
+          "filename": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-17.jpg",
+          "scrollY": 14688,
+          "atProgress": 1.0047886167738405
+        },
+        {
+          "index": 18,
+          "filename": "screenshots/sub/02-white-label-ai-agents-for-chat-voice-sta-18.jpg",
+          "scrollY": 15552,
+          "atProgress": 1.063893829525243
+        }
+      ]
+    },
+    {
+      "url": "https://stammer.ai/ai-voice-agents",
+      "index": 3,
+      "pageTitle": "AI Voice Agents | Stammer.ai",
+      "urlSlug": "ai-voice-agents-stammer-ai",
+      "pageHeight": 9575,
+      "viewportHeight": 1080,
+      "maxScrollY": 8495,
+      "fullScreenshot": "screenshots/03-ai-voice.png",
+      "subScreenshots": [
+        {
+          "index": 0,
+          "filename": "screenshots/sub/03-ai-voice-agents-stammer-ai-00.jpg",
+          "scrollY": 0,
+          "atProgress": 0
+        },
+        {
+          "index": 1,
+          "filename": "screenshots/sub/03-ai-voice-agents-stammer-ai-01.jpg",
+          "scrollY": 864,
+          "atProgress": 0.10170688640376692
+        },
+        {
+          "index": 2,
+          "filename": "screenshots/sub/03-ai-voice-agents-stammer-ai-02.jpg",
+          "scrollY": 1728,
+          "atProgress": 0.20341377280753384
+        },
+        {
+          "index": 3,
+          "filename": "screenshots/sub/03-ai-voice-agents-stammer-ai-03.jpg",
+          "scrollY": 2592,
+          "atProgress": 0.30512065921130077
+        },
+        {
+          "index": 4,
+          "filename": "screenshots/sub/03-ai-voice-agents-stammer-ai-04.jpg",
+          "scrollY": 3456,
+          "atProgress": 0.4068275456150677
+        },
+        {
+          "index": 5,
+          "filename": "screenshots/sub/03-ai-voice-agents-stammer-ai-05.jpg",
+          "scrollY": 4320,
+          "atProgress": 0.5085344320188346
+        },
+        {
+          "index": 6,
+          "filename": "screenshots/sub/03-ai-voice-agents-stammer-ai-06.jpg",
+          "scrollY": 5184,
+          "atProgress": 0.6102413184226015
+        },
+        {
+          "index": 7,
+          "filename": "screenshots/sub/03-ai-voice-agents-stammer-ai-07.jpg",
+          "scrollY": 6048,
+          "atProgress": 0.7119482048263684
+        },
+        {
+          "index": 8,
+          "filename": "screenshots/sub/03-ai-voice-agents-stammer-ai-08.jpg",
+          "scrollY": 6912,
+          "atProgress": 0.8136550912301354
+        },
+        {
+          "index": 9,
+          "filename": "screenshots/sub/03-ai-voice-agents-stammer-ai-09.jpg",
+          "scrollY": 7776,
+          "atProgress": 0.9153619776339023
+        },
+        {
+          "index": 10,
+          "filename": "screenshots/sub/03-ai-voice-agents-stammer-ai-10.jpg",
+          "scrollY": 8640,
+          "atProgress": 1.0170688640376693
+        },
+        {
+          "index": 11,
+          "filename": "screenshots/sub/03-ai-voice-agents-stammer-ai-11.jpg",
+          "scrollY": 9504,
+          "atProgress": 1.1187757504414362
+        }
+      ]
+    },
+    {
+      "url": "https://stammer.ai/white-label",
+      "index": 4,
+      "pageTitle": "White Label AI Agents for Chat & Voice | Stammer AI",
+      "urlSlug": "white-label-ai-agents-for-chat-voice-sta",
+      "pageHeight": 15698,
+      "viewportHeight": 1080,
+      "maxScrollY": 14618,
+      "fullScreenshot": "screenshots/04-white-label.png",
+      "subScreenshots": [
+        {
+          "index": 0,
+          "filename": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-00.jpg",
+          "scrollY": 0,
+          "atProgress": 0
+        },
+        {
+          "index": 1,
+          "filename": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-01.jpg",
+          "scrollY": 864,
+          "atProgress": 0.05910521275140238
+        },
+        {
+          "index": 2,
+          "filename": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-02.jpg",
+          "scrollY": 1728,
+          "atProgress": 0.11821042550280476
+        },
+        {
+          "index": 3,
+          "filename": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-03.jpg",
+          "scrollY": 2592,
+          "atProgress": 0.17731563825420715
+        },
+        {
+          "index": 4,
+          "filename": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-04.jpg",
+          "scrollY": 3456,
+          "atProgress": 0.23642085100560953
+        },
+        {
+          "index": 5,
+          "filename": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-05.jpg",
+          "scrollY": 4320,
+          "atProgress": 0.2955260637570119
+        },
+        {
+          "index": 6,
+          "filename": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-06.jpg",
+          "scrollY": 5184,
+          "atProgress": 0.3546312765084143
+        },
+        {
+          "index": 7,
+          "filename": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-07.jpg",
+          "scrollY": 6048,
+          "atProgress": 0.41373648925981665
+        },
+        {
+          "index": 8,
+          "filename": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-08.jpg",
+          "scrollY": 6912,
+          "atProgress": 0.47284170201121906
+        },
+        {
+          "index": 9,
+          "filename": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-09.jpg",
+          "scrollY": 7776,
+          "atProgress": 0.5319469147626215
+        },
+        {
+          "index": 10,
+          "filename": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-10.jpg",
+          "scrollY": 8640,
+          "atProgress": 0.5910521275140238
+        },
+        {
+          "index": 11,
+          "filename": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-11.jpg",
+          "scrollY": 9504,
+          "atProgress": 0.6501573402654262
+        },
+        {
+          "index": 12,
+          "filename": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-12.jpg",
+          "scrollY": 10368,
+          "atProgress": 0.7092625530168286
+        },
+        {
+          "index": 13,
+          "filename": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-13.jpg",
+          "scrollY": 11232,
+          "atProgress": 0.768367765768231
+        },
+        {
+          "index": 14,
+          "filename": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-14.jpg",
+          "scrollY": 12096,
+          "atProgress": 0.8274729785196333
+        },
+        {
+          "index": 15,
+          "filename": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-15.jpg",
+          "scrollY": 12960,
+          "atProgress": 0.8865781912710358
+        },
+        {
+          "index": 16,
+          "filename": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-16.jpg",
+          "scrollY": 13824,
+          "atProgress": 0.9456834040224381
+        },
+        {
+          "index": 17,
+          "filename": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-17.jpg",
+          "scrollY": 14688,
+          "atProgress": 1.0047886167738405
+        },
+        {
+          "index": 18,
+          "filename": "screenshots/sub/04-white-label-ai-agents-for-chat-voice-sta-18.jpg",
+          "scrollY": 15552,
+          "atProgress": 1.063893829525243
+        }
+      ]
+    },
+    {
+      "url": "https://stammer.ai/pricing",
+      "index": 5,
+      "pageTitle": "Stammer AI | White Label AI Agents",
+      "urlSlug": "stammer-ai-white-label-ai-agents",
+      "pageHeight": 4604,
+      "viewportHeight": 1080,
+      "maxScrollY": 3524,
+      "fullScreenshot": "screenshots/05-pricing.png",
+      "subScreenshots": [
+        {
+          "index": 0,
+          "filename": "screenshots/sub/05-stammer-ai-white-label-ai-agents-00.jpg",
+          "scrollY": 0,
+          "atProgress": 0
+        },
+        {
+          "index": 1,
+          "filename": "screenshots/sub/05-stammer-ai-white-label-ai-agents-01.jpg",
+          "scrollY": 864,
+          "atProgress": 0.24517593643586832
+        },
+        {
+          "index": 2,
+          "filename": "screenshots/sub/05-stammer-ai-white-label-ai-agents-02.jpg",
+          "scrollY": 1728,
+          "atProgress": 0.49035187287173665
+        },
+        {
+          "index": 3,
+          "filename": "screenshots/sub/05-stammer-ai-white-label-ai-agents-03.jpg",
+          "scrollY": 2592,
+          "atProgress": 0.735527809307605
+        },
+        {
+          "index": 4,
+          "filename": "screenshots/sub/05-stammer-ai-white-label-ai-agents-04.jpg",
+          "scrollY": 3456,
+          "atProgress": 0.9807037457434733
+        },
+        {
+          "index": 5,
+          "filename": "screenshots/sub/05-stammer-ai-white-label-ai-agents-05.jpg",
+          "scrollY": 4320,
+          "atProgress": 1.2258796821793416
+        }
+      ]
+    }
+  ]
+}

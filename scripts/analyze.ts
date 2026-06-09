@@ -11,6 +11,9 @@
 import Anthropic from "@anthropic-ai/sdk";
 import fs from "fs";
 import path from "path";
+import { loadEnv } from "./lib/load-env";
+
+loadEnv();
 
 const [, , projectId] = process.argv;
 
@@ -20,7 +23,7 @@ if (!projectId) {
 }
 
 if (!process.env.ANTHROPIC_API_KEY) {
-  console.error("Error: ANTHROPIC_API_KEY environment variable is not set.");
+  console.error("Error: ANTHROPIC_API_KEY is not set. Add it to local.env or export it in your shell.");
   process.exit(1);
 }
 
