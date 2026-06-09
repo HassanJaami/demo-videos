@@ -3,6 +3,7 @@ import { ProjectConfig } from "../types/project";
 export const INTRO_FRAMES = 60;
 export const OUTRO_FRAMES = 90;
 export const DEFAULT_FEATURE_FRAMES = 150;
+export const SCROLL_PAUSE_FRAMES = 30;
 
 export const calculateTotalFrames = (project: ProjectConfig): number =>
   INTRO_FRAMES +

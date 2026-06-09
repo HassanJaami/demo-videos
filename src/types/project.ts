@@ -1,3 +1,8 @@
+export interface SceneCaption {
+  text: string;
+  atProgress: number; // 0–1: fraction of the scroll at which this caption appears
+}
+
 // Shape of public/<id>/config.json — no screenshot paths needed
 export interface FeatureSceneJSON {
   title: string;
@@ -13,6 +18,7 @@ export interface FeatureSceneJSON {
     endX?: number;
     endY?: number;
   };
+  captions?: SceneCaption[];
 }
 
 export interface ProjectConfigJSON {

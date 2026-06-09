@@ -1,5 +1,6 @@
 import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
+import { CaptionOverlay } from "../../../components/CaptionOverlay";
 import { Callout } from "../../../components/Callout";
 import { KenBurns } from "../../../components/KenBurns";
 import { LAPTOP_SCREEN, LaptopFrame } from "../../../components/LaptopFrame";
@@ -23,6 +24,7 @@ export const FeatureScene: React.FC<Props> = ({
   scroll = false,
   durationInFrames = DEFAULT_FEATURE_FRAMES,
   kenBurns = {},
+  captions,
   colors,
 }) => {
   const frame = useCurrentFrame();
@@ -96,6 +98,9 @@ export const FeatureScene: React.FC<Props> = ({
             cardY={cardY}
           />
         </AbsoluteFill>
+        {captions && captions.length > 0 && (
+          <CaptionOverlay captions={captions} durationInFrames={durationInFrames} />
+        )}
       </AbsoluteFill>
     );
   }
@@ -139,6 +144,9 @@ export const FeatureScene: React.FC<Props> = ({
           cardY={cardY}
         />
       </AbsoluteFill>
+      {captions && captions.length > 0 && (
+        <CaptionOverlay captions={captions} durationInFrames={durationInFrames} />
+      )}
     </AbsoluteFill>
   );
 };

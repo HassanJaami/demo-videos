@@ -116,6 +116,41 @@ export const projects: ProjectConfig[] = [
         "cardAlign": "left",
         "device": "laptop",
         "scroll": true,
+        "durationInFrames": 450,
+        "captions": [
+          {
+            "text": "Build & Deploy AI Agents in 60 Seconds",
+            "atProgress": 0
+          },
+          {
+            "text": "AI Agents Across Every Channel",
+            "atProgress": 0.14
+          },
+          {
+            "text": "White Label AI Agents & Chatbots",
+            "atProgress": 0.27
+          },
+          {
+            "text": "Built for Every Industry",
+            "atProgress": 0.4
+          },
+          {
+            "text": "Scale Your AI Agents Daily",
+            "atProgress": 0.53
+          },
+          {
+            "text": "Deploy on Mobile",
+            "atProgress": 0.65
+          },
+          {
+            "text": "Integrates With Your Tech Stack",
+            "atProgress": 0.76
+          },
+          {
+            "text": "Choose Your Plan",
+            "atProgress": 0.88
+          }
+        ],
         "screenshot": "stammer-test/screenshots/01-home.png"
       },
       {
@@ -125,6 +160,37 @@ export const projects: ProjectConfig[] = [
         "cardAlign": "right",
         "device": "laptop",
         "scroll": true,
+        "durationInFrames": 390,
+        "captions": [
+          {
+            "text": "Turn Visitors into Paying Customers",
+            "atProgress": 0
+          },
+          {
+            "text": "Why Businesses Love AI Chatbots",
+            "atProgress": 0.15
+          },
+          {
+            "text": "Customize Your AI Chatbot",
+            "atProgress": 0.3
+          },
+          {
+            "text": "Add Your Knowledge Base",
+            "atProgress": 0.48
+          },
+          {
+            "text": "Integrate Chatbots Anywhere",
+            "atProgress": 0.63
+          },
+          {
+            "text": "Build Your Brand, Not Ours",
+            "atProgress": 0.76
+          },
+          {
+            "text": "Trusted by Agencies Everywhere",
+            "atProgress": 0.88
+          }
+        ],
         "screenshot": "stammer-test/screenshots/02-ai-chat.png"
       },
       {
@@ -134,6 +200,37 @@ export const projects: ProjectConfig[] = [
         "cardAlign": "left",
         "device": "laptop",
         "scroll": true,
+        "durationInFrames": 390,
+        "captions": [
+          {
+            "text": "Convert Calls Into Revenue",
+            "atProgress": 0
+          },
+          {
+            "text": "How Voice Agents Work",
+            "atProgress": 0.17
+          },
+          {
+            "text": "Connect a Phone Number",
+            "atProgress": 0.3
+          },
+          {
+            "text": "Add Your Knowledge Base",
+            "atProgress": 0.43
+          },
+          {
+            "text": "AI Voice Agents In Action",
+            "atProgress": 0.56
+          },
+          {
+            "text": "Build Your Brand, Not Ours",
+            "atProgress": 0.72
+          },
+          {
+            "text": "Trusted by Agencies Everywhere",
+            "atProgress": 0.87
+          }
+        ],
         "screenshot": "stammer-test/screenshots/03-ai-voice.png"
       },
       {
@@ -143,6 +240,33 @@ export const projects: ProjectConfig[] = [
         "cardAlign": "right",
         "device": "laptop",
         "scroll": true,
+        "durationInFrames": 360,
+        "captions": [
+          {
+            "text": "Launch Your Own AI SaaS Empire",
+            "atProgress": 0
+          },
+          {
+            "text": "#1 White Label SaaS Platform for AI",
+            "atProgress": 0.18
+          },
+          {
+            "text": "Get Started in Under 10 Minutes",
+            "atProgress": 0.35
+          },
+          {
+            "text": "Why Agencies Choose White Label",
+            "atProgress": 0.52
+          },
+          {
+            "text": "Perfect for These Business Types",
+            "atProgress": 0.7
+          },
+          {
+            "text": "White Label SaaS for Agency Owners",
+            "atProgress": 0.86
+          }
+        ],
         "screenshot": "stammer-test/screenshots/04-white-label.png"
       },
       {
@@ -152,6 +276,21 @@ export const projects: ProjectConfig[] = [
         "cardAlign": "left",
         "device": "laptop",
         "scroll": true,
+        "durationInFrames": 330,
+        "captions": [
+          {
+            "text": "Starter · Full SaaS · Enterprise Plans",
+            "atProgress": 0
+          },
+          {
+            "text": "AI Chatbot & Voice Agent Add-Ons",
+            "atProgress": 0.48
+          },
+          {
+            "text": "Frequently Asked Questions",
+            "atProgress": 0.72
+          }
+        ],
         "screenshot": "stammer-test/screenshots/05-pricing.png"
       },
       {
@@ -161,6 +300,25 @@ export const projects: ProjectConfig[] = [
         "cardAlign": "right",
         "device": "laptop",
         "scroll": true,
+        "durationInFrames": 300,
+        "captions": [
+          {
+            "text": "Comprehensive Documentation",
+            "atProgress": 0
+          },
+          {
+            "text": "Submit a Support Ticket",
+            "atProgress": 0.22
+          },
+          {
+            "text": "Daily Office Hours & YouTube Tutorials",
+            "atProgress": 0.44
+          },
+          {
+            "text": "Schedule a 1-on-1 Onboarding Call",
+            "atProgress": 0.68
+          }
+        ],
         "screenshot": "stammer-test/screenshots/06-support.png"
       },
       {
@@ -170,6 +328,41 @@ export const projects: ProjectConfig[] = [
         "cardAlign": "left",
         "device": "laptop",
         "scroll": true,
+        "durationInFrames": 420,
+        "captions": [
+          {
+            "text": "AI Agents at Enterprise Scale",
+            "atProgress": 0
+          },
+          {
+            "text": "RunSignup: Proven at Scale",
+            "atProgress": 0.13
+          },
+          {
+            "text": "Building AI Infrastructure",
+            "atProgress": 0.26
+          },
+          {
+            "text": "Drop-In AI Agent Infrastructure",
+            "atProgress": 0.39
+          },
+          {
+            "text": "Built for Enterprise Scale",
+            "atProgress": 0.52
+          },
+          {
+            "text": "Real Business Impact",
+            "atProgress": 0.65
+          },
+          {
+            "text": "Why Enterprises Choose to Buy",
+            "atProgress": 0.77
+          },
+          {
+            "text": "HIPAA Compliant · Flexible by Design",
+            "atProgress": 0.89
+          }
+        ],
         "screenshot": "stammer-test/screenshots/07-enterprise.png"
       }
     ]

@@ -8,13 +8,13 @@ import {
   staticFile,
   useCurrentFrame,
 } from "remotion";
+import { SCROLL_PAUSE_FRAMES } from "../lib/constants";
 
 interface Props {
   src: string;
   durationInFrames: number;
   containerWidth: number;
   containerHeight: number;
-  /** Frames to hold at top and bottom before/after scrolling. Default: 20 */
   pauseFrames?: number;
 }
 
@@ -23,7 +23,7 @@ export const ScrollPan: React.FC<Props> = ({
   durationInFrames,
   containerWidth,
   containerHeight,
-  pauseFrames = 20,
+  pauseFrames = SCROLL_PAUSE_FRAMES,
 }) => {
   const frame = useCurrentFrame();
   const [dims, setDims] = useState<{ width: number; height: number } | null>(null);
