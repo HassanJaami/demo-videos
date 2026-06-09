@@ -1,0 +1,70 @@
+{
+  "name": "stammer-test",
+  "tagline": "Build white label AI chatbots and AI voice agents that can answer questions, generate leads, schedule appointments & more.",
+  "cta": "Try it free",
+  "colors": {
+    "bg": "#ffffff",
+    "bgDark": "#111111",
+    "accent": "#0066ff",
+    "text": "#111111",
+    "textMuted": "#666666"
+  },
+  "features": [
+    {
+      "title": "Home",
+      "subtitle": "Describe this page.",
+      "callout": "",
+      "cardAlign": "left",
+      "device": "laptop",
+      "scroll": true
+    },
+    {
+      "title": "AI Chat",
+      "subtitle": "Describe this page.",
+      "callout": "",
+      "cardAlign": "right",
+      "device": "laptop",
+      "scroll": true
+    },
+    {
+      "title": "AI Voice",
+      "subtitle": "Describe this page.",
+      "callout": "",
+      "cardAlign": "left",
+      "device": "laptop",
+      "scroll": true
+    },
+    {
+      "title": "White Label",
+      "subtitle": "Describe this page.",
+      "callout": "",
+      "cardAlign": "right",
+      "device": "laptop",
+      "scroll": true
+    },
+    {
+      "title": "Pricing",
+      "subtitle": "Describe this page.",
+      "callout": "",
+      "cardAlign": "left",
+      "device": "laptop",
+      "scroll": true
+    },
+    {
+      "title": "Support",
+      "subtitle": "Describe this page.",
+      "callout": "",
+      "cardAlign": "right",
+      "device": "laptop",
+      "scroll": true
+    },
+    {
+      "title": "Enterprise",
+      "subtitle": "Describe this page.",
+      "callout": "",
+      "cardAlign": "left",
+      "device": "laptop",
+      "scroll": true
+    }
+  ]
+}
