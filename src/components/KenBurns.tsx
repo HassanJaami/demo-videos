@@ -40,7 +40,7 @@ export const KenBurns: React.FC<Props> = ({
         style={{
           width: "100%",
           height: "100%",
-          objectFit: "cover",
+          objectFit: "contain",
           transform: `scale(${scale}) translate(${x}px, ${y}px)`,
           transformOrigin: "center center",
         }}
