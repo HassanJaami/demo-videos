@@ -3,12 +3,21 @@ export interface SceneCaption {
   atProgress: number; // 0–1: fraction of the scroll at which this caption appears
 }
 
-// Shape of public/<id>/config.json — no screenshot paths needed
+export interface HighlightRegion {
+  x: number;      // 0–1 fraction of video width
+  y: number;      // 0–1 fraction of video height
+  width: number;  // 0–1 fraction of video width
+  height: number; // 0–1 fraction of video height
+  color?: string;
+}
+
+// Shape of public/<id>/config.json
 export interface FeatureSceneJSON {
+  screenshot?: string;
   title: string;
   subtitle: string;
   callout?: string;
-  cardAlign?: "left" | "right";
+  cardAlign?: "left" | "right" | "top-left" | "top-right" | "bottom-left" | "bottom-right";
   device?: "laptop" | "mobile" | "none";
   scroll?: boolean;
   durationInFrames?: number;
@@ -19,7 +28,8 @@ export interface FeatureSceneJSON {
     endY?: number;
   };
   captions?: SceneCaption[];
-  cropBottom?: number; // 0–1 fraction of image height to exclude from scroll range (e.g. to skip repeated footer)
+  cropBottom?: number;
+  highlight?: HighlightRegion;
 }
 
 export interface ProjectConfigJSON {

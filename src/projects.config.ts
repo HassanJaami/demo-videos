@@ -6,46 +6,103 @@ export const projects: ProjectConfig[] = [
   {
     "id": "scoutside",
     "name": "scoutside",
-    "tagline": "College recruiting, finally clear.",
-    "cta": "Your recruiting journey starts here.",
+    "tagline": "Scoutside Generated Project",
+    "cta": "Try it free",
     "colors": {
-      "bg": "#f5f1ec",
-      "bgDark": "#1c1c1a",
-      "accent": "#c9622d",
-      "text": "#2a2a27",
-      "textMuted": "#6b6b67"
+      "bg": "#ffffff",
+      "bgDark": "#111111",
+      "accent": "#0066ff",
+      "text": "#111111",
+      "textMuted": "#666666"
     },
     "features": [
       {
-        "title": "Your Recruiting Dashboard",
-        "subtitle": "Personalized insights based on your profile, position, and graduation year.",
-        "callout": "428 matched programs",
+        "screenshot": "scoutside/screenshots/home/01.png",
+        "title": "home — section 1",
+        "subtitle": "Describe this section.",
+        "callout": "",
         "cardAlign": "left",
-        "device": "laptop",
-        "screenshot": "scoutside/screenshots/01-landing.png"
+        "device": "laptop"
       },
       {
-        "title": "Know Your Lane",
-        "subtitle": "See exactly where your profile fits — and why — based on real NCAA data.",
-        "callout": "Backed by historical NCAA data",
+        "screenshot": "scoutside/screenshots/home/02.png",
+        "title": "home — section 2",
+        "subtitle": "Describe this section.",
+        "callout": "",
         "cardAlign": "right",
-        "device": "laptop",
-        "screenshot": "scoutside/screenshots/02-your-lane.png"
+        "device": "laptop"
       },
       {
-        "title": "Programs Where You Align",
-        "subtitle": "Ranked by fit — not just division or geography.",
+        "screenshot": "scoutside/screenshots/home/03.png",
+        "title": "home — section 3",
+        "subtitle": "Describe this section.",
+        "callout": "",
         "cardAlign": "left",
-        "device": "laptop",
-        "screenshot": "scoutside/screenshots/03-schools.png"
+        "device": "laptop"
       },
       {
-        "title": "Connect With Coaches",
-        "subtitle": "AI-powered outreach that helps you draft emails, improve your tone, and follow up at the right time.",
-        "callout": "AI-powered · Your data stays private",
+        "screenshot": "scoutside/screenshots/home/04.png",
+        "title": "home — section 4",
+        "subtitle": "Describe this section.",
+        "callout": "",
         "cardAlign": "right",
-        "device": "laptop",
-        "screenshot": "scoutside/screenshots/04-outreach.png"
+        "device": "laptop"
+      },
+      {
+        "screenshot": "scoutside/screenshots/home/05.png",
+        "title": "home — section 5",
+        "subtitle": "Describe this section.",
+        "callout": "",
+        "cardAlign": "left",
+        "device": "laptop"
+      },
+      {
+        "screenshot": "scoutside/screenshots/home/06.png",
+        "title": "home — section 6",
+        "subtitle": "Describe this section.",
+        "callout": "",
+        "cardAlign": "right",
+        "device": "laptop"
+      },
+      {
+        "screenshot": "scoutside/screenshots/home/07.png",
+        "title": "home — section 7",
+        "subtitle": "Describe this section.",
+        "callout": "",
+        "cardAlign": "left",
+        "device": "laptop"
+      },
+      {
+        "screenshot": "scoutside/screenshots/home/08.png",
+        "title": "home — section 8",
+        "subtitle": "Describe this section.",
+        "callout": "",
+        "cardAlign": "right",
+        "device": "laptop"
+      },
+      {
+        "screenshot": "scoutside/screenshots/home/09.png",
+        "title": "home — section 9",
+        "subtitle": "Describe this section.",
+        "callout": "",
+        "cardAlign": "left",
+        "device": "laptop"
+      },
+      {
+        "screenshot": "scoutside/screenshots/home/10.png",
+        "title": "home — section 10",
+        "subtitle": "Describe this section.",
+        "callout": "",
+        "cardAlign": "right",
+        "device": "laptop"
+      },
+      {
+        "screenshot": "scoutside/screenshots/home/11.png",
+        "title": "home — section 11",
+        "subtitle": "Describe this section.",
+        "callout": "",
+        "cardAlign": "left",
+        "device": "laptop"
       }
     ]
   },
@@ -61,329 +118,171 @@ export const projects: ProjectConfig[] = [
       "text": "#111111",
       "textMuted": "#666666"
     },
-    "features": []
-  },
-  {
-    "id": "stammer-old",
-    "name": "stammer.ai",
-    "tagline": "Build and Deploy AI Agents",
-    "cta": "Start building for free — no credit card required.",
-    "colors": {
-      "bg": "#f8f9ff",
-      "bgDark": "#0f1124",
-      "accent": "#3b5bdb",
-      "text": "#111827",
-      "textMuted": "#6b7280"
-    },
     "features": [
       {
+        "screenshot": "stammer/screenshots/home/01.png",
         "title": "Build and Deploy AI Agents",
-        "subtitle": "AI chat and voice agents that handle customer support, qualify leads, and book appointments 24/7.",
+        "subtitle": "AI chat and voice agents that handle customer support, qualify leads, and book appointments 24/7. Fully white label.",
         "callout": "35K+ Live Agents · 12M+ Conversations · 99.9% Uptime",
-        "cardAlign": "left",
-        "device": "laptop",
-        "screenshot": "stammer-old/screenshots/01-landing.png"
+        "cardAlign": "bottom-right",
+        "device": "none",
+        "durationInFrames": 210,
+        "highlight": {
+          "x": 0.05,
+          "y": 0.08,
+          "width": 0.9,
+          "height": 0.75
+        }
       },
       {
-        "title": "White Label AI Voice Agents & Chatbots",
+        "screenshot": "stammer/screenshots/home/03.png",
+        "title": "What AI Agencies are Saying",
+        "subtitle": "Join 1,300+ agencies generating $300–$500 MRR per client with Stammer.ai.",
+        "callout": "1,300+ Agencies · 5-star rated",
+        "cardAlign": "bottom-right",
+        "device": "none",
+        "durationInFrames": 210,
+        "highlight": {
+          "x": 0.05,
+          "y": 0.08,
+          "width": 0.9,
+          "height": 0.72
+        }
+      },
+      {
+        "screenshot": "stammer/screenshots/home/04.png",
+        "title": "AI Agents Across Every Channel",
+        "subtitle": "Deploy intelligent agents that handle conversations, capture leads, and drive revenue — on website, phone, messaging, and more.",
+        "callout": "Website · Phone · Messaging · Lead Collection",
+        "cardAlign": "bottom-left",
+        "device": "none",
+        "durationInFrames": 210,
+        "highlight": {
+          "x": 0.05,
+          "y": 0.06,
+          "width": 0.9,
+          "height": 0.78
+        }
+      },
+      {
+        "screenshot": "stammer/screenshots/home/05.png",
+        "title": "White Label AI Voice Agents & AI Chatbots",
         "subtitle": "Build and sell AI-powered solutions that work across every channel your customers prefer.",
-        "callout": "Chat · Voice · 6+ Channels",
-        "cardAlign": "right",
-        "device": "laptop",
-        "screenshot": "stammer-old/screenshots/02-white-label.png"
+        "callout": "AI Chat · AI Voice · Multi-Channel",
+        "cardAlign": "bottom-left",
+        "device": "none",
+        "durationInFrames": 210,
+        "highlight": {
+          "x": 0.05,
+          "y": 0.08,
+          "width": 0.9,
+          "height": 0.78
+        }
       },
       {
+        "screenshot": "stammer/screenshots/home/06.png",
+        "title": "Built for Every Industry",
+        "subtitle": "See how AI agents transform businesses across sectors — from Home Services to Healthcare, Real Estate, Legal, and more.",
+        "callout": "Home Services · Healthcare · Real Estate · Legal",
+        "cardAlign": "top-right",
+        "device": "none",
+        "durationInFrames": 210,
+        "highlight": {
+          "x": 0.05,
+          "y": 0.06,
+          "width": 0.9,
+          "height": 0.72
+        }
+      },
+      {
+        "screenshot": "stammer/screenshots/home/07.png",
         "title": "Scale Your AI Agency in Days, Not Months",
-        "subtitle": "Everything you need to brand, sell, and deliver AI solutions as your own product to unlimited clients.",
-        "callout": "White Label · Client Portal · API Integration",
-        "cardAlign": "left",
-        "device": "laptop",
-        "screenshot": "stammer-old/screenshots/03-white-label.png"
+        "subtitle": "Your brand, client dashboards that sell 3x higher, and zero dev work required to plug into any tech stack.",
+        "callout": "100% Your Brand · 3x Client Value · Zero Dev Work",
+        "cardAlign": "top-right",
+        "device": "none",
+        "durationInFrames": 210,
+        "highlight": {
+          "x": 0.05,
+          "y": 0.08,
+          "width": 0.9,
+          "height": 0.78
+        }
       },
       {
-        "title": "Position, Price, and Profit — Your Way",
-        "subtitle": "10x client value, 100%+ markup, $800+ per client. Zero revenue sharing. Your margins, your business.",
-        "callout": "Scale from $0 to $50K MRR in 6 months",
-        "cardAlign": "right",
-        "device": "laptop",
-        "screenshot": "stammer-old/screenshots/04-reseller.png"
-      }
-    ]
-  },
-  {
-    "id": "stammer-test",
-    "name": "Stammer.ai",
-    "tagline": "Build white label AI chatbots and AI voice agents that can answer questions, generate leads, schedule appointments & more.",
-    "cta": "Start Building Free",
-    "colors": {
-      "bg": "#ffffff",
-      "bgDark": "#111111",
-      "accent": "#0066ff",
-      "text": "#111111",
-      "textMuted": "#666666"
-    },
-    "features": [
-      {
-        "title": "Build AI Agents in 60 Seconds",
-        "subtitle": "Deploy AI chatbots and voice agents across every channel — websites, social, and more — without writing a single line of code.",
-        "callout": "Built for every industry",
-        "cardAlign": "left",
-        "device": "laptop",
-        "scroll": true,
-        "durationInFrames": 450,
-        "captions": [
-          {
-            "text": "Build & Deploy AI Agents in 60 Seconds",
-            "atProgress": 0
-          },
-          {
-            "text": "AI Agents Across Every Channel",
-            "atProgress": 0.14
-          },
-          {
-            "text": "White Label AI Agents & Chatbots",
-            "atProgress": 0.27
-          },
-          {
-            "text": "Built for Every Industry",
-            "atProgress": 0.4
-          },
-          {
-            "text": "Scale Your AI Agents Daily",
-            "atProgress": 0.53
-          },
-          {
-            "text": "Deploy on Mobile",
-            "atProgress": 0.65
-          },
-          {
-            "text": "Integrates With Your Tech Stack",
-            "atProgress": 0.76
-          },
-          {
-            "text": "Choose Your Plan",
-            "atProgress": 0.88
-          }
-        ],
-        "screenshot": "stammer-test/screenshots/01-home.png"
+        "screenshot": "stammer/screenshots/home/08.png",
+        "title": "How Stammer AI Works",
+        "subtitle": "Easy but powerful setup for AI agencies with no coding needed. Build AI chatbots or AI voice agents for your clients in minutes.",
+        "callout": "No coding needed · Build in minutes",
+        "cardAlign": "bottom-left",
+        "device": "none",
+        "durationInFrames": 210,
+        "highlight": {
+          "x": 0.05,
+          "y": 0.06,
+          "width": 0.9,
+          "height": 0.78
+        }
       },
       {
-        "title": "AI Chat",
-        "subtitle": "Turn website visitors into paying customers automatically. Customize your chatbot, add your knowledge base, and integrate anywhere.",
-        "callout": "Sell more with less effort",
-        "cardAlign": "right",
-        "device": "laptop",
-        "scroll": true,
-        "durationInFrames": 390,
-        "cropBottom": 0.06,
-        "captions": [
-          {
-            "text": "Turn Visitors into Paying Customers",
-            "atProgress": 0
-          },
-          {
-            "text": "Why Businesses Love AI Chatbots",
-            "atProgress": 0.15
-          },
-          {
-            "text": "Customize Your AI Chatbot",
-            "atProgress": 0.3
-          },
-          {
-            "text": "Add Your Knowledge Base",
-            "atProgress": 0.48
-          },
-          {
-            "text": "Integrate Chatbots Anywhere",
-            "atProgress": 0.63
-          },
-          {
-            "text": "Build Your Brand, Not Ours",
-            "atProgress": 0.76
-          },
-          {
-            "text": "Trusted by Agencies Everywhere",
-            "atProgress": 0.88
-          }
-        ],
-        "screenshot": "stammer-test/screenshots/02-ai-chat.png"
+        "screenshot": "stammer/screenshots/home/09.png",
+        "title": "Easily Integrate with your Tech Stack",
+        "subtitle": "Works with Claude, Grok, Twilio, Meta, Google, Shopify and more. High-priority 24/7 support backed by real humans.",
+        "callout": "Claude · Twilio · Google · Shopify · Meta",
+        "cardAlign": "bottom-right",
+        "device": "none",
+        "durationInFrames": 210,
+        "highlight": {
+          "x": 0.05,
+          "y": 0.06,
+          "width": 0.9,
+          "height": 0.75
+        }
       },
       {
-        "title": "AI Voice Agents",
-        "subtitle": "AI voice agents that convert inbound and outbound calls into revenue — handling bookings, FAQs, and lead qualification 24/7.",
-        "callout": "Handles real calls, real leads",
-        "cardAlign": "left",
-        "device": "laptop",
-        "scroll": true,
-        "durationInFrames": 390,
-        "cropBottom": 0.05,
-        "captions": [
-          {
-            "text": "Convert Calls Into Revenue",
-            "atProgress": 0
-          },
-          {
-            "text": "How Voice Agents Work",
-            "atProgress": 0.17
-          },
-          {
-            "text": "Connect a Phone Number",
-            "atProgress": 0.3
-          },
-          {
-            "text": "Add Your Knowledge Base",
-            "atProgress": 0.43
-          },
-          {
-            "text": "AI Voice Agents In Action",
-            "atProgress": 0.56
-          },
-          {
-            "text": "Build Your Brand, Not Ours",
-            "atProgress": 0.72
-          },
-          {
-            "text": "Trusted by Agencies Everywhere",
-            "atProgress": 0.87
-          }
-        ],
-        "screenshot": "stammer-test/screenshots/03-ai-voice.png"
+        "screenshot": "stammer/screenshots/home/10.png",
+        "title": "High-Priority Customer Support",
+        "subtitle": "Daily office hours, full documentation, AI agency tutorials, and 24/7 priority support — rated excellent by AI agencies.",
+        "callout": "Daily Office Hours · 14-day Free Trial",
+        "cardAlign": "bottom-right",
+        "device": "none",
+        "durationInFrames": 210,
+        "highlight": {
+          "x": 0.05,
+          "y": 0.06,
+          "width": 0.9,
+          "height": 0.78
+        }
       },
       {
-        "title": "White Label SaaS",
-        "subtitle": "Launch your own AI SaaS empire in under 10 minutes. Resell AI agents under your brand and keep 100% of the revenue.",
-        "callout": "#1 White Label AI Platform",
-        "cardAlign": "right",
-        "device": "laptop",
-        "scroll": true,
-        "durationInFrames": 360,
-        "cropBottom": 0.06,
-        "captions": [
-          {
-            "text": "Launch Your Own AI SaaS Empire",
-            "atProgress": 0
-          },
-          {
-            "text": "#1 White Label SaaS Platform for AI",
-            "atProgress": 0.18
-          },
-          {
-            "text": "Get Started in Under 10 Minutes",
-            "atProgress": 0.35
-          },
-          {
-            "text": "Why Agencies Choose White Label",
-            "atProgress": 0.52
-          },
-          {
-            "text": "Perfect for These Business Types",
-            "atProgress": 0.7
-          },
-          {
-            "text": "White Label SaaS for Agency Owners",
-            "atProgress": 0.86
-          }
-        ],
-        "screenshot": "stammer-test/screenshots/04-white-label.png"
+        "screenshot": "stammer/screenshots/home/11.png",
+        "title": "Choose Your Plan",
+        "subtitle": "Agency at $197/mo, Full SaaS Mode at $497/mo, or Enterprise with custom pricing. Sell to unlimited clients with zero revenue sharing.",
+        "callout": "Agency · Full SaaS Mode · Enterprise",
+        "cardAlign": "top-right",
+        "device": "none",
+        "durationInFrames": 210,
+        "highlight": {
+          "x": 0.04,
+          "y": 0.1,
+          "width": 0.92,
+          "height": 0.82
+        }
       },
       {
-        "title": "Simple Pricing",
-        "subtitle": "Start at $197/mo or go full SaaS mode at $497/mo. Scale your agency with transparent pricing and no hidden fees.",
-        "callout": "Enterprise pricing available",
-        "cardAlign": "left",
-        "device": "laptop",
-        "scroll": true,
-        "durationInFrames": 330,
-        "cropBottom": 0.09,
-        "captions": [
-          {
-            "text": "Starter · Full SaaS · Enterprise Plans",
-            "atProgress": 0
-          },
-          {
-            "text": "AI Chatbot & Voice Agent Add-Ons",
-            "atProgress": 0.48
-          },
-          {
-            "text": "Frequently Asked Questions",
-            "atProgress": 0.72
-          }
-        ],
-        "screenshot": "stammer-test/screenshots/05-pricing.png"
-      },
-      {
-        "title": "Always-On Support",
-        "subtitle": "Docs, daily office hours, YouTube tutorials, and 1-on-1 onboarding calls — expert help is always there when you need it.",
-        "callout": "Response within 24 hours",
-        "cardAlign": "right",
-        "device": "laptop",
-        "scroll": true,
-        "durationInFrames": 300,
-        "cropBottom": 0.16,
-        "captions": [
-          {
-            "text": "Comprehensive Documentation",
-            "atProgress": 0
-          },
-          {
-            "text": "Submit a Support Ticket",
-            "atProgress": 0.22
-          },
-          {
-            "text": "Daily Office Hours & YouTube Tutorials",
-            "atProgress": 0.44
-          },
-          {
-            "text": "Schedule a 1-on-1 Onboarding Call",
-            "atProgress": 0.68
-          }
-        ],
-        "screenshot": "stammer-test/screenshots/06-support.png"
-      },
-      {
-        "title": "Enterprise Scale",
-        "subtitle": "Drop-in AI agent infrastructure built for enterprise — flexible by design, HIPAA compliant, and proven at scale.",
-        "callout": "HIPAA Compliant",
-        "cardAlign": "left",
-        "device": "laptop",
-        "scroll": true,
-        "durationInFrames": 420,
-        "cropBottom": 0.04,
-        "captions": [
-          {
-            "text": "AI Agents at Enterprise Scale",
-            "atProgress": 0
-          },
-          {
-            "text": "RunSignup: Proven at Scale",
-            "atProgress": 0.13
-          },
-          {
-            "text": "Building AI Infrastructure",
-            "atProgress": 0.26
-          },
-          {
-            "text": "Drop-In AI Agent Infrastructure",
-            "atProgress": 0.39
-          },
-          {
-            "text": "Built for Enterprise Scale",
-            "atProgress": 0.52
-          },
-          {
-            "text": "Real Business Impact",
-            "atProgress": 0.65
-          },
-          {
-            "text": "Why Enterprises Choose to Buy",
-            "atProgress": 0.77
-          },
-          {
-            "text": "HIPAA Compliant · Flexible by Design",
-            "atProgress": 0.89
-          }
-        ],
-        "screenshot": "stammer-test/screenshots/07-enterprise.png"
+        "screenshot": "stammer/screenshots/home/12.png",
+        "title": "Start Selling AI Agents with Stammer.ai",
+        "subtitle": "Get started today — it's free! White label AI agents ready to deploy for your clients in minutes.",
+        "callout": "Free to start · No credit card required",
+        "cardAlign": "top-left",
+        "device": "none",
+        "durationInFrames": 210,
+        "highlight": {
+          "x": 0.04,
+          "y": 0.04,
+          "width": 0.62,
+          "height": 0.52
+        }
       }
     ]
   }

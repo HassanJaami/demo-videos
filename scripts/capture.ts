@@ -342,44 +342,64 @@ async function captureByClass() {
   const pages = await discoverPages(page, url);
   console.log(`Found ${pages.length} page(s): ${pages.map((p) => p.text).join(", ")}\n`);
 
-  const captured: { filepath: string; pageLabel: string; index: number }[] = [];
+  // filepath stored in config = path relative to public/ for staticFile()
+  const captured: { configPath: string; pageLabel: string; index: number }[] = [];
 
   for (const { href, text: pageText } of pages) {
     if (href !== url && href !== url + "/") await goto(page, href);
     await preScroll(page);
 
-    // Collect absolute top positions of all matching elements, top-to-bottom
-    const tops: number[] = await page.evaluate((sel) => {
+    // Collect full bounds of every matching element, sorted top-to-bottom
+    type ElBounds = { top: number; x: number; width: number; height: number };
+    const elements: ElBounds[] = await page.evaluate((sel) => {
       return Array.from(document.querySelectorAll(sel))
         .map((el) => {
           const rect = el.getBoundingClientRect();
-          return Math.round(rect.top + window.scrollY);
+          return {
+            top:    Math.round(rect.top + window.scrollY),
+            x:      Math.round(rect.left),
+            width:  Math.round(rect.width),
+            height: Math.round(rect.height),
+          };
         })
-        .sort((a, b) => a - b);
+        .sort((a, b) => a.top - b.top);
     }, selector);
 
-    if (tops.length === 0) {
+    if (elements.length === 0) {
       console.log(`  [${pageText}]  no "${selector}" elements found — skipping\n`);
       continue;
     }
 
     const pageDir = path.join(SCREENSHOTS_DIR, slug(pageText));
     fs.mkdirSync(pageDir, { recursive: true });
-    console.log(`  [${pageText}]  ${tops.length} section(s)  →  screenshots/${slug(pageText)}/`);
+    console.log(`  [${pageText}]  ${elements.length} section(s)  →  screenshots/${slug(pageText)}/`);
 
-    for (let i = 0; i < tops.length; i++) {
-      // Scroll so the element top aligns with the viewport top
-      await page.evaluate((y) => window.scrollTo({ top: y, behavior: "instant" }), tops[i]);
-      await page.waitForTimeout(300);
+    let fileIdx = 1;
+    for (let i = 0; i < elements.length; i++) {
+      const el = elements[i];
+      const chunks = Math.ceil(el.height / VIEWPORT_H);
 
-      const filename = `${String(i + 1).padStart(2, "0")}.png`;
-      const filepath = path.join(pageDir, filename);
+      for (let p = 0; p < chunks; p++) {
+        const scrollY = el.top + p * VIEWPORT_H;
+        // Remaining height of the div from this scroll offset — never bleeds into next section
+        const clipHeight = Math.min(VIEWPORT_H, el.height - p * VIEWPORT_H);
 
-      // Fixed-size clip — same 1920×1080 for every section
-      await page.screenshot({ path: filepath, clip: { x: 0, y: 0, width: VIEWPORT_W, height: VIEWPORT_H } });
-      const { size } = fs.statSync(filepath);
-      console.log(`    ✓ ${slug(pageText)}/${filename}  (${(size / 1024).toFixed(0)} KB)`);
-      captured.push({ filepath: `${slug(pageText)}/${filename}`, pageLabel: pageText, index: i });
+        await page.evaluate((y) => window.scrollTo({ top: y, behavior: "instant" }), scrollY);
+        await page.waitForTimeout(300);
+
+        const filename   = `${String(fileIdx).padStart(2, "0")}.png`;
+        const absPath    = path.join(pageDir, filename);
+        // Path relative to public/ — used by staticFile() in Remotion
+        const configPath = `${projectId}/screenshots/${slug(pageText)}/${filename}`;
+
+        // Clip exactly to the div: x/width from element bounds, y=0 (div top is at viewport top)
+        await page.screenshot({ path: absPath, clip: { x: el.x, y: 0, width: el.width, height: clipHeight } });
+        const { size } = fs.statSync(absPath);
+        const chunkLabel = chunks > 1 ? `  part ${p + 1}/${chunks}` : "";
+        console.log(`    ✓ ${slug(pageText)}/${filename}  [section ${i + 1}${chunkLabel}]  (${(size / 1024).toFixed(0)} KB)`);
+        captured.push({ configPath, pageLabel: pageText, index: i });
+        fileIdx++;
+      }
     }
     console.log();
   }
@@ -389,13 +409,13 @@ async function captureByClass() {
   if (!fs.existsSync(CONFIG_PATH)) {
     const config = {
       ...baseConfig(pageTitle, metaDesc),
-      features: captured.map(({ filepath, pageLabel, index }, i) => ({
-        screenshot: filepath,
+      features: captured.map(({ configPath, pageLabel, index }, i) => ({
+        screenshot: configPath,
         title: `${pageLabel} — section ${index + 1}`,
         subtitle: "Describe this section.",
         callout: "",
         cardAlign: i % 2 === 0 ? "left" : "right",
-        device: "laptop",
+        device: "none",
       })),
     };
     fs.writeFileSync(CONFIG_PATH, JSON.stringify(config, null, 2));

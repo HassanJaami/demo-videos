@@ -9,5 +9,116 @@
     "text": "#111111",
     "textMuted": "#666666"
   },
-  "features": []
+  "features": [
+    {
+      "screenshot": "stammer/screenshots/home/01.png",
+      "title": "Build and Deploy AI Agents",
+      "subtitle": "AI chat and voice agents that handle customer support, qualify leads, and book appointments 24/7. Fully white label.",
+      "callout": "35K+ Live Agents · 12M+ Conversations · 99.9% Uptime",
+      "cardAlign": "bottom-right",
+      "device": "none",
+      "durationInFrames": 210,
+      "highlight": { "x": 0.05, "y": 0.08, "width": 0.9, "height": 0.75 }
+    },
+    {
+      "screenshot": "stammer/screenshots/home/03.png",
+      "title": "What AI Agencies are Saying",
+      "subtitle": "Join 1,300+ agencies generating $300–$500 MRR per client with Stammer.ai.",
+      "callout": "1,300+ Agencies · 5-star rated",
+      "cardAlign": "bottom-right",
+      "device": "none",
+      "durationInFrames": 210,
+      "highlight": { "x": 0.05, "y": 0.08, "width": 0.9, "height": 0.72 }
+    },
+    {
+      "screenshot": "stammer/screenshots/home/04.png",
+      "title": "AI Agents Across Every Channel",
+      "subtitle": "Deploy intelligent agents that handle conversations, capture leads, and drive revenue — on website, phone, messaging, and more.",
+      "callout": "Website · Phone · Messaging · Lead Collection",
+      "cardAlign": "bottom-left",
+      "device": "none",
+      "durationInFrames": 210,
+      "highlight": { "x": 0.05, "y": 0.06, "width": 0.9, "height": 0.78 }
+    },
+    {
+      "screenshot": "stammer/screenshots/home/05.png",
+      "title": "White Label AI Voice Agents & AI Chatbots",
+      "subtitle": "Build and sell AI-powered solutions that work across every channel your customers prefer.",
+      "callout": "AI Chat · AI Voice · Multi-Channel",
+      "cardAlign": "bottom-left",
+      "device": "none",
+      "durationInFrames": 210,
+      "highlight": { "x": 0.05, "y": 0.08, "width": 0.9, "height": 0.78 }
+    },
+    {
+      "screenshot": "stammer/screenshots/home/06.png",
+      "title": "Built for Every Industry",
+      "subtitle": "See how AI agents transform businesses across sectors — from Home Services to Healthcare, Real Estate, Legal, and more.",
+      "callout": "Home Services · Healthcare · Real Estate · Legal",
+      "cardAlign": "top-right",
+      "device": "none",
+      "durationInFrames": 210,
+      "highlight": { "x": 0.05, "y": 0.06, "width": 0.9, "height": 0.72 }
+    },
+    {
+      "screenshot": "stammer/screenshots/home/07.png",
+      "title": "Scale Your AI Agency in Days, Not Months",
+      "subtitle": "Your brand, client dashboards that sell 3x higher, and zero dev work required to plug into any tech stack.",
+      "callout": "100% Your Brand · 3x Client Value · Zero Dev Work",
+      "cardAlign": "top-right",
+      "device": "none",
+      "durationInFrames": 210,
+      "highlight": { "x": 0.05, "y": 0.08, "width": 0.9, "height": 0.78 }
+    },
+    {
+      "screenshot": "stammer/screenshots/home/08.png",
+      "title": "How Stammer AI Works",
+      "subtitle": "Easy but powerful setup for AI agencies with no coding needed. Build AI chatbots or AI voice agents for your clients in minutes.",
+      "callout": "No coding needed · Build in minutes",
+      "cardAlign": "bottom-left",
+      "device": "none",
+      "durationInFrames": 210,
+      "highlight": { "x": 0.05, "y": 0.06, "width": 0.9, "height": 0.78 }
+    },
+    {
+      "screenshot": "stammer/screenshots/home/09.png",
+      "title": "Easily Integrate with your Tech Stack",
+      "subtitle": "Works with Claude, Grok, Twilio, Meta, Google, Shopify and more. High-priority 24/7 support backed by real humans.",
+      "callout": "Claude · Twilio · Google · Shopify · Meta",
+      "cardAlign": "bottom-right",
+      "device": "none",
+      "durationInFrames": 210,
+      "highlight": { "x": 0.05, "y": 0.06, "width": 0.9, "height": 0.75 }
+    },
+    {
+      "screenshot": "stammer/screenshots/home/10.png",
+      "title": "High-Priority Customer Support",
+      "subtitle": "Daily office hours, full documentation, AI agency tutorials, and 24/7 priority support — rated excellent by AI agencies.",
+      "callout": "Daily Office Hours · 14-day Free Trial",
+      "cardAlign": "bottom-right",
+      "device": "none",
+      "durationInFrames": 210,
+      "highlight": { "x": 0.05, "y": 0.06, "width": 0.9, "height": 0.78 }
+    },
+    {
+      "screenshot": "stammer/screenshots/home/11.png",
+      "title": "Choose Your Plan",
+      "subtitle": "Agency at $197/mo, Full SaaS Mode at $497/mo, or Enterprise with custom pricing. Sell to unlimited clients with zero revenue sharing.",
+      "callout": "Agency · Full SaaS Mode · Enterprise",
+      "cardAlign": "top-right",
+      "device": "none",
+      "durationInFrames": 210,
+      "highlight": { "x": 0.04, "y": 0.1, "width": 0.92, "height": 0.82 }
+    },
+    {
+      "screenshot": "stammer/screenshots/home/12.png",
+      "title": "Start Selling AI Agents with Stammer.ai",
+      "subtitle": "Get started today — it's free! White label AI agents ready to deploy for your clients in minutes.",
+      "callout": "Free to start · No credit card required",
+      "cardAlign": "top-left",
+      "device": "none",
+      "durationInFrames": 210,
+      "highlight": { "x": 0.04, "y": 0.04, "width": 0.62, "height": 0.52 }
+    }
+  ]
 }

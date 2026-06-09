@@ -11,7 +11,7 @@
   },
   "features": [
     {
-      "screenshot": "home/01.png",
+      "screenshot": "scoutside/screenshots/home/01.png",
       "title": "home — section 1",
       "subtitle": "Describe this section.",
       "callout": "",
@@ -19,7 +19,7 @@
       "device": "laptop"
     },
     {
-      "screenshot": "home/02.png",
+      "screenshot": "scoutside/screenshots/home/02.png",
       "title": "home — section 2",
       "subtitle": "Describe this section.",
       "callout": "",
@@ -27,7 +27,7 @@
       "device": "laptop"
     },
     {
-      "screenshot": "home/03.png",
+      "screenshot": "scoutside/screenshots/home/03.png",
       "title": "home — section 3",
       "subtitle": "Describe this section.",
       "callout": "",
@@ -35,7 +35,7 @@
       "device": "laptop"
     },
     {
-      "screenshot": "home/04.png",
+      "screenshot": "scoutside/screenshots/home/04.png",
       "title": "home — section 4",
       "subtitle": "Describe this section.",
       "callout": "",
@@ -43,7 +43,7 @@
       "device": "laptop"
     },
     {
-      "screenshot": "home/05.png",
+      "screenshot": "scoutside/screenshots/home/05.png",
       "title": "home — section 5",
       "subtitle": "Describe this section.",
       "callout": "",
@@ -51,7 +51,7 @@
       "device": "laptop"
     },
     {
-      "screenshot": "home/06.png",
+      "screenshot": "scoutside/screenshots/home/06.png",
       "title": "home — section 6",
       "subtitle": "Describe this section.",
       "callout": "",
@@ -59,7 +59,7 @@
       "device": "laptop"
     },
     {
-      "screenshot": "home/07.png",
+      "screenshot": "scoutside/screenshots/home/07.png",
       "title": "home — section 7",
       "subtitle": "Describe this section.",
       "callout": "",
@@ -67,7 +67,7 @@
       "device": "laptop"
     },
     {
-      "screenshot": "home/08.png",
+      "screenshot": "scoutside/screenshots/home/08.png",
       "title": "home — section 8",
       "subtitle": "Describe this section.",
       "callout": "",
@@ -75,7 +75,7 @@
       "device": "laptop"
     },
     {
-      "screenshot": "home/09.png",
+      "screenshot": "scoutside/screenshots/home/09.png",
       "title": "home — section 9",
       "subtitle": "Describe this section.",
       "callout": "",
@@ -83,7 +83,7 @@
       "device": "laptop"
     },
     {
-      "screenshot": "home/10.png",
+      "screenshot": "scoutside/screenshots/home/10.png",
       "title": "home — section 10",
       "subtitle": "Describe this section.",
       "callout": "",
@@ -91,7 +91,7 @@
       "device": "laptop"
     },
     {
-      "screenshot": "home/11.png",
+      "screenshot": "scoutside/screenshots/home/11.png",
       "title": "home — section 11",
       "subtitle": "Describe this section.",
       "callout": "",

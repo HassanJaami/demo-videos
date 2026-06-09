@@ -1,6 +1,7 @@
 import React from "react";
 import { AbsoluteFill, useVideoConfig } from "remotion";
 import { CaptionOverlay } from "../../../components/CaptionOverlay";
+import { HighlightBox } from "../../../components/HighlightBox";
 import { KenBurns } from "../../../components/KenBurns";
 import { LAPTOP_SCREEN, LaptopFrame } from "../../../components/LaptopFrame";
 import { MOBILE_SCREEN, MobileFrame } from "../../../components/MobileFrame";
@@ -12,6 +13,15 @@ import { FeatureSceneConfig, ProjectColors } from "../../../types/project";
 
 interface Props extends FeatureSceneConfig {
   colors: ProjectColors;
+}
+
+function cardPosition(align: string): React.CSSProperties {
+  const top   = align === "top-left" || align === "top-right";
+  const right = align === "right" || align === "top-right" || align === "bottom-right";
+  return {
+    justifyContent: top ? "flex-start" : "flex-end",
+    alignItems:     right ? "flex-end" : "flex-start",
+  };
 }
 
 export const FeatureScene: React.FC<Props> = ({
@@ -26,13 +36,12 @@ export const FeatureScene: React.FC<Props> = ({
   kenBurns = {},
   captions,
   cropBottom,
+  highlight,
   colors,
 }) => {
   const { width: videoWidth, height: videoHeight } = useVideoConfig();
   const { cardOpacity, cardY } = useCardAnimation();
   const { deviceY, deviceOpacity } = useDeviceAnimation();
-
-  const isLeft = cardAlign === "left";
 
   const containerDims = resolveContainerDims(device, videoWidth, videoHeight);
 
@@ -50,21 +59,14 @@ export const FeatureScene: React.FC<Props> = ({
       src={screenshot}
       durationInFrames={durationInFrames}
       startScale={kenBurns.startScale ?? 1}
-      endScale={kenBurns.endScale ?? (device === "none" ? 1.04 : 1.02)}
+      endScale={kenBurns.endScale ?? (device === "none" ? 1.03 : 1.02)}
       endX={kenBurns.endX ?? 0}
-      endY={kenBurns.endY ?? (device === "none" ? -15 : 0)}
+      endY={kenBurns.endY ?? (device === "none" ? -10 : 0)}
     />
   );
 
   const cardOverlay = (
-    <AbsoluteFill
-      style={{
-        justifyContent: "flex-end",
-        alignItems: isLeft ? "flex-start" : "flex-end",
-        padding: 60,
-        zIndex: 10,
-      }}
-    >
+    <AbsoluteFill style={{ ...cardPosition(cardAlign), padding: 60, zIndex: 10 }}>
       <TextCard
         title={title}
         subtitle={subtitle}
@@ -80,6 +82,13 @@ export const FeatureScene: React.FC<Props> = ({
     return (
       <AbsoluteFill style={{ backgroundColor: colors.bg }}>
         {screenshotContent}
+        {highlight && (
+          <HighlightBox
+            {...highlight}
+            color={highlight.color ?? colors.accent}
+            durationInFrames={durationInFrames}
+          />
+        )}
         {cardOverlay}
         {captions && captions.length > 0 && (
           <CaptionOverlay captions={captions} durationInFrames={durationInFrames} />
@@ -99,6 +108,13 @@ export const FeatureScene: React.FC<Props> = ({
           <MobileFrame>{screenshotContent}</MobileFrame>
         )}
       </div>
+      {highlight && (
+        <HighlightBox
+          {...highlight}
+          color={highlight.color ?? colors.accent}
+          durationInFrames={durationInFrames}
+        />
+      )}
       {cardOverlay}
       {captions && captions.length > 0 && (
         <CaptionOverlay captions={captions} durationInFrames={durationInFrames} />
