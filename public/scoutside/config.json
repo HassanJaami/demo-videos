@@ -1,0 +1,102 @@
+{
+  "name": "scoutside",
+  "tagline": "Scoutside Generated Project",
+  "cta": "Try it free",
+  "colors": {
+    "bg": "#ffffff",
+    "bgDark": "#111111",
+    "accent": "#0066ff",
+    "text": "#111111",
+    "textMuted": "#666666"
+  },
+  "features": [
+    {
+      "screenshot": "home/01.png",
+      "title": "home — section 1",
+      "subtitle": "Describe this section.",
+      "callout": "",
+      "cardAlign": "left",
+      "device": "laptop"
+    },
+    {
+      "screenshot": "home/02.png",
+      "title": "home — section 2",
+      "subtitle": "Describe this section.",
+      "callout": "",
+      "cardAlign": "right",
+      "device": "laptop"
+    },
+    {
+      "screenshot": "home/03.png",
+      "title": "home — section 3",
+      "subtitle": "Describe this section.",
+      "callout": "",
+      "cardAlign": "left",
+      "device": "laptop"
+    },
+    {
+      "screenshot": "home/04.png",
+      "title": "home — section 4",
+      "subtitle": "Describe this section.",
+      "callout": "",
+      "cardAlign": "right",
+      "device": "laptop"
+    },
+    {
+      "screenshot": "home/05.png",
+      "title": "home — section 5",
+      "subtitle": "Describe this section.",
+      "callout": "",
+      "cardAlign": "left",
+      "device": "laptop"
+    },
+    {
+      "screenshot": "home/06.png",
+      "title": "home — section 6",
+      "subtitle": "Describe this section.",
+      "callout": "",
+      "cardAlign": "right",
+      "device": "laptop"
+    },
+    {
+      "screenshot": "home/07.png",
+      "title": "home — section 7",
+      "subtitle": "Describe this section.",
+      "callout": "",
+      "cardAlign": "left",
+      "device": "laptop"
+    },
+    {
+      "screenshot": "home/08.png",
+      "title": "home — section 8",
+      "subtitle": "Describe this section.",
+      "callout": "",
+      "cardAlign": "right",
+      "device": "laptop"
+    },
+    {
+      "screenshot": "home/09.png",
+      "title": "home — section 9",
+      "subtitle": "Describe this section.",
+      "callout": "",
+      "cardAlign": "left",
+      "device": "laptop"
+    },
+    {
+      "screenshot": "home/10.png",
+      "title": "home — section 10",
+      "subtitle": "Describe this section.",
+      "callout": "",
+      "cardAlign": "right",
+      "device": "laptop"
+    },
+    {
+      "screenshot": "home/11.png",
+      "title": "home — section 11",
+      "subtitle": "Describe this section.",
+      "callout": "",
+      "cardAlign": "left",
+      "device": "laptop"
+    }
+  ]
+}

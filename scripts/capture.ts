@@ -313,12 +313,22 @@ async function discoverPages(page: Page, baseUrl: string): Promise<{ href: strin
 }
 
 // ─── --class mode ─────────────────────────────────────────────────────────────
+const HTML_TAGS = new Set([
+  "section","article","main","div","header","footer","aside","nav",
+  "p","ul","ol","li","table","form","figure","blockquote","details",
+]);
+function toSelector(name: string): string {
+  if (name.startsWith(".") || name.startsWith("#") || name.includes("[")) return name;
+  if (HTML_TAGS.has(name.toLowerCase())) return name.toLowerCase();
+  return `.${name}`;
+}
+
 async function captureByClass() {
   fs.mkdirSync(SCREENSHOTS_DIR, { recursive: true });
   const { browser, page } = await openPage();
-  const selector = `.${CLASS_NAME}`;
+  const selector = toSelector(CLASS_NAME);
 
-  console.log(`Launching browser → ${url}  (class mode: "${CLASS_NAME}")\n`);
+  console.log(`Launching browser → ${url}  (class mode: "${selector}")\n`);
   await goto(page, url);
 
   const pageTitle = await page.title();
@@ -349,7 +359,7 @@ async function captureByClass() {
     }, selector);
 
     if (tops.length === 0) {
-      console.log(`  [${pageText}]  no ".${CLASS_NAME}" elements found — skipping\n`);
+      console.log(`  [${pageText}]  no "${selector}" elements found — skipping\n`);
       continue;
     }
 
