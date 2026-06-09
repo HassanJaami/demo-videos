@@ -1,9 +1,10 @@
 import React from "react";
-import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
+import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { Callout } from "../../../components/Callout";
 import { KenBurns } from "../../../components/KenBurns";
-import { LaptopFrame } from "../../../components/LaptopFrame";
-import { MobileFrame } from "../../../components/MobileFrame";
+import { LAPTOP_SCREEN, LaptopFrame } from "../../../components/LaptopFrame";
+import { MOBILE_SCREEN, MobileFrame } from "../../../components/MobileFrame";
+import { ScrollPan } from "../../../components/ScrollPan";
 import { SceneTitle } from "../../../components/SceneTitle";
 import { DEFAULT_FEATURE_FRAMES } from "../../../lib/constants";
 import { FeatureSceneConfig, ProjectColors } from "../../../types/project";
@@ -19,11 +20,13 @@ export const FeatureScene: React.FC<Props> = ({
   callout,
   cardAlign = "left",
   device = "none",
+  scroll = false,
   durationInFrames = DEFAULT_FEATURE_FRAMES,
   kenBurns = {},
   colors,
 }) => {
   const frame = useCurrentFrame();
+  const { width: videoWidth, height: videoHeight } = useVideoConfig();
 
   const cardOpacity = interpolate(frame, [10, 30], [0, 1], {
     extrapolateLeft: "clamp",
@@ -44,18 +47,38 @@ export const FeatureScene: React.FC<Props> = ({
 
   const isLeft = cardAlign === "left";
 
-  // --- Full-bleed mode (no device frame) ---
+  // Resolve container dimensions for ScrollPan
+  const containerDims =
+    device === "laptop"
+      ? LAPTOP_SCREEN
+      : device === "mobile"
+        ? MOBILE_SCREEN
+        : { width: videoWidth, height: videoHeight };
+
+  // Screenshot content — scroll pan or KenBurns
+  const screenshotContent = scroll ? (
+    <ScrollPan
+      src={screenshot}
+      durationInFrames={durationInFrames}
+      containerWidth={containerDims.width}
+      containerHeight={containerDims.height}
+    />
+  ) : (
+    <KenBurns
+      src={screenshot}
+      durationInFrames={durationInFrames}
+      startScale={kenBurns.startScale ?? 1}
+      endScale={kenBurns.endScale ?? (device === "none" ? 1.04 : 1.02)}
+      endX={kenBurns.endX ?? 0}
+      endY={kenBurns.endY ?? (device === "none" ? -15 : 0)}
+    />
+  );
+
+  // --- Full-bleed mode ---
   if (device === "none") {
     return (
       <AbsoluteFill style={{ backgroundColor: colors.bg }}>
-        <KenBurns
-          src={screenshot}
-          durationInFrames={durationInFrames}
-          startScale={kenBurns.startScale ?? 1}
-          endScale={kenBurns.endScale ?? 1.04}
-          endX={kenBurns.endX ?? 0}
-          endY={kenBurns.endY ?? -15}
-        />
+        {screenshotContent}
         <AbsoluteFill
           style={{
             justifyContent: "flex-end",
@@ -78,17 +101,6 @@ export const FeatureScene: React.FC<Props> = ({
   }
 
   // --- Device frame mode ---
-  const frameContent = (
-    <KenBurns
-      src={screenshot}
-      durationInFrames={durationInFrames}
-      startScale={kenBurns.startScale ?? 1}
-      endScale={kenBurns.endScale ?? 1.02}
-      endX={kenBurns.endX ?? 0}
-      endY={kenBurns.endY ?? 0}
-    />
-  );
-
   return (
     <AbsoluteFill
       style={{
@@ -97,7 +109,6 @@ export const FeatureScene: React.FC<Props> = ({
         alignItems: "center",
       }}
     >
-      {/* Device frame — slides up on entry */}
       <div
         style={{
           transform: `translateY(${deviceY}px)`,
@@ -105,13 +116,12 @@ export const FeatureScene: React.FC<Props> = ({
         }}
       >
         {device === "laptop" ? (
-          <LaptopFrame>{frameContent}</LaptopFrame>
+          <LaptopFrame>{screenshotContent}</LaptopFrame>
         ) : (
-          <MobileFrame>{frameContent}</MobileFrame>
+          <MobileFrame>{screenshotContent}</MobileFrame>
         )}
       </div>
 
-      {/* Text card — overlays at bottom corner */}
       <AbsoluteFill
         style={{
           justifyContent: "flex-end",
@@ -133,7 +143,6 @@ export const FeatureScene: React.FC<Props> = ({
   );
 };
 
-// --- Shared text card ---
 const TextCard: React.FC<{
   title: string;
   subtitle: string;

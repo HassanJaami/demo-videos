@@ -5,6 +5,7 @@ export interface FeatureSceneJSON {
   callout?: string;
   cardAlign?: "left" | "right";
   device?: "laptop" | "mobile" | "none";
+  scroll?: boolean;
   durationInFrames?: number;
   kenBurns?: {
     startScale?: number;
