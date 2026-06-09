@@ -2,8 +2,8 @@ import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 import { Callout } from "../../../components/Callout";
 import { KenBurns } from "../../../components/KenBurns";
-import { LAPTOP_SCREEN, LaptopFrame } from "../../../components/LaptopFrame";
-import { MOBILE_SCREEN, MobileFrame } from "../../../components/MobileFrame";
+import { LaptopFrame } from "../../../components/LaptopFrame";
+import { MobileFrame } from "../../../components/MobileFrame";
 import { SceneTitle } from "../../../components/SceneTitle";
 import { DEFAULT_FEATURE_FRAMES } from "../../../lib/constants";
 import { FeatureSceneConfig, ProjectColors } from "../../../types/project";
@@ -78,8 +78,6 @@ export const FeatureScene: React.FC<Props> = ({
   }
 
   // --- Device frame mode ---
-  const screen = device === "laptop" ? LAPTOP_SCREEN : MOBILE_SCREEN;
-
   const frameContent = (
     <KenBurns
       src={screenshot}

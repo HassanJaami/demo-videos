@@ -34,10 +34,25 @@ export const KenBurns: React.FC<Props> = ({
   });
 
   return (
-    <div style={{ width: "100%", height: "100%", overflow: "hidden" }}>
+    <div style={{ width: "100%", height: "100%", overflow: "hidden", position: "relative" }}>
+      {/* Blurred fill — eliminates black bars on wide screenshots */}
       <Img
         src={staticFile(src)}
         style={{
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          filter: "blur(24px)",
+          transform: "scale(1.08)",
+          opacity: 0.55,
+        }}
+      />
+      {/* Actual screenshot — contained so full image is visible */}
+      <Img
+        src={staticFile(src)}
+        style={{
+          position: "absolute",
           width: "100%",
           height: "100%",
           objectFit: "contain",
